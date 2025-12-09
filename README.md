@@ -1588,6 +1588,9 @@ function createProgram(gl, vsSource, fsSource) {
 
 </details>
 
+# Community & study group
+Want to share your progress, ask questions, provide feedback, or share your favorite resources? Drop a link in the ["Show and tell" discussion thread](https://github.com/GregStanton/webgl2-glsl-primer/discussions/1)!
+
 # Next steps
 
 Now that you have the irreducible minimum of the programmable geometry pipeline memorized, you are ready to build. You can use the following resources to apply your skills to advanced procedural generation, to deepen your theoretical understanding, or to solve specific implementation problems.
