@@ -3,10 +3,16 @@
 **Status:** Final round of revision under way  
 **Author:** Greg Stanton
 
-These notes take the reader from _zero_ (no knowledge of WebGL2 or GLSL) to _hero_ (confidence in everything from low-level state management to 3D graphics production). Brief explanations of prerequisite concepts are provided. Following the prerequisite material, the notes introduce the fundamentals of WebGL2 and GLSL in a natural order, chunking concepts and syntax into a Q&A format, suitable for spaced-repetition practice with software like [Anki](https://apps.ankiweb.net/). Projects are integrated throughout, with solution code, to provide practice applying ideas as soon as they’re introduced. At the end, recommendations on leveraging your new skills are provided, including an annotated list of links to high-quality projects and advanced resources.
+This primer takes the reader from _zero_ (no knowledge of WebGL2 or GLSL) to _hero_ (confidence in everything from low-level state management to procedural graphics production). If you want to engineer advanced 2D or 3D graphics, or understand how graphics are implemented under the hood, then this guide is for you.
+
+## Method
+Fundamentals of WebGL2 and GLSL are introduced in a natural order, chunking concepts and syntax into atomic Q&A _cards_. But this is not an FAQ or a reference; this is a learning guide meant meant to be internalized, in order, with concepts that build cumulatively from the ground up. The cards can be directly incorporated into spaced-repetition learning software like [Anki](https://apps.ankiweb.net/), which leverages a scientifically-backed algorithm to ensure you remember what you learn, _efficiently_ and _permanently_. Because of the small chunks, you can also make significant progress with just a few minutes of effort per day. To provide practice applying the ideas as soon as they’re introduced, hands-on projects are integrated throughout, with solution code.
+
+## Scope
+The material focuses on the _programmable geometry pipeline_—creating form and color through code, logic, and mathematics. It covers the irreducible minimum required to build a 3D engine from scratch. While it establishes the foundation for all graphics tasks, it does not cover external asset management (like texture image loading), focusing instead on the state machine and the vertex/fragment logic essential for procedural graphics and tools like the [RMF Engine](https://github.com/GregStanton/proposal-rmf-engine) designed by this primer's author. It's self contained, with intuitive explanations of the mathematical prerequisites. Recommendations on leveraging the covered skills are provided at the end, including an annotated list of links to high-quality projects and advanced resources.
 
 # Background
-This guide focuses on the _programmable geometry pipeline_—creating form and color through code, logic, and mathematics. It covers the irreducible minimum required to build a 3D engine from scratch. While it establishes the foundation for all graphics tasks, it does not cover external asset management (like texture image loading), focusing instead on the state machine and the vertex/fragment logic essential for procedural graphics and tools like the [RMF Engine](https://github.com/GregStanton/proposal-rmf-engine) designed by this primer's author. Before diving into the programmable geometry pipeline, we'll make sure we have the prerequisite concepts and skills in place.
+Before diving into the programmable geometry pipeline, we'll make sure we have the prerequisite concepts and skills in place.
 
 ## Prerequisite topics
 Prerequisites include both programming and math.
@@ -80,20 +86,22 @@ We'll be directly dealing with normalized device coordinates early on. WebGL aut
 
 *Attribution:* *Image of NDC space (referred to as “clipspace” in original source) appears in [WebGL model view projection - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection) and is licensed under [CC BY SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en).*
 
-## Recommended experience
+## Programming tips
 
-The following background experience is helpful but not necessary:
+You may find the following knowledge and experience helpful:
 
-* Very basic familiarity with typed languages  
-* Experience creating graphics with a high-level library like [p5.js](https://p5js.org/) (especially `beginShape([kind])`/`endShape([mode])`)
+* **The notion of a [statically typed language](https://developer.mozilla.org/en-US/docs/Glossary/Static_typing):** It's enough to know that in some languages, it's necessary to explicitly declare variable types&mdash; like `bool` for a Boolean (true or false), or `int` for an integer ($\ldots, -2, -1, 0, 1, 2, \ldots$), or `float` for real numbers (decimal numbers). This may include syntax like `const int myInteger = 10;` instead of `const myInteger = 10;`
+* **Experience creating graphics with a high-level library like [p5.js](https://p5js.org/):** You can dive directly into WebGL2 & GLSL if you like to start with the nitty gritty. However, if you like to start by practicing the high-level concepts, such as making a 3D shape out of triangles without lots of low-level detail, then starting with a library like p5.js is a great option. In that case, this [introduction to coding with p5.js](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) from The Coding Train is an excellent choice.
 
 ## Anki tip: Learning lists
-For convenience, the Q&A _cards_ in these notes will sometimes have a full list as an answer. List answers tend to be more cognitively demanding, and therefore can disrupt mental flow unnecessarily. If you find this to be the case during your own spaced-repetition practice, you can customize one of the following methods according to your own background: 
+The cards in these notes sometimes have a full list as an answer. Lists tend to be more cognitively demanding and can disrupt mental flow. To mitigate this effect, the list cards include hints to make them easier, but you can customize the approach to your own background using the following list-learning principles:
 
-* Accompany the answer with a hint containing a single **acronym or a mnemonic phrase** (e.g. in biology, "Do kings play chess on fine green silk?" is a mnemonic for domain, kingdom, phylum, class, order, family, genus, species)
-* Accompany the answer with a hint explaining how to **chunk** a longer list into only 3–4 items
-* Implement lists using **cloze deletion** in software like Anki (e.g. create a sequence of cards in which all list items are revealed except for one)
-* Create cards explaining how each list item connects conceptually to its neighbors (a form of **elaborative encoding**)
+* Create cards explaining how each list item connects conceptually to the next item (essentially creating a mental **[linked list](https://en.wikipedia.org/wiki/Linked_list)**, a form of **[elaborative encoding](https://en.wikipedia.org/wiki/Elaborative_encoding)** from cognitive science)
+* Include a hint explaining how to [**chunk**](https://en.wikipedia.org/wiki/Chunking_(psychology)) a longer list into only 3–4 items (chunks can be conceptual, or arbitrary, as with phone numbers)
+* Add a single **[acronym or a mnemonic phrase](https://en.wikipedia.org/wiki/Mnemonic)**, especially for ordered lists with seemingly arbitrary names (e.g., in biology, "Do kings play chess on fine green silk?" is a mnemonic for domain, kingdom, phylum, class, order, family, genus, species)
+* Implement lists using [**cloze deletion**](https://notes.andymatuschak.org/zPJt42JTcoAPTTTa2vdDonV), especially if the above techniques prove difficult, in software like Anki (e.g., create cards where all items are revealed except for one)
+
+Hints should be included on the _back_ of a card (along with the answer), rather than the front. They serve as a reminder of how to internalize the idea, in case you fail to retrieve it from memory. If you rely on a hint on the front of a card, you may have trouble remembering it without that extra cue.
 
 # Introduction
 As with all sections of this primer, the current introductory section is self contained. Since the concepts covered here are foundational, sources are provided. Anyone hungry for additional context on subsequent sections will be well served by the [MDN WebGL Reference](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API), the [OpenGL ES 3.0 Specification](https://registry.khronos.org/OpenGL/specs/es/3.0/es_spec_3.0.pdf), and [The OpenGL ES® Shading Language 3.00.6](https://registry.khronos.org/OpenGL/specs/es/3.0/GLSL_ES_Specification_3.00.pdf).
