@@ -1047,7 +1047,7 @@ const shader = `#version 300 es
 </p>
 
 <p>
-<strong>Context:</strong> From <a href="#project-2-set-up-vbo-and-vao-supply-triangle-data">Project 2</a>, you already have the geometry (a <code>Float32Array</code> of 2D coordinates) in a VBO, and a VAO that is currently bound. Now you need to build the program to process that data.
+<strong>Context:</strong> From <a href="https://github.com/GregStanton/webgl2-glsl-primer/edit/main/README.md#project-2-create-and-bind-vbo-and-vao-supply-triangle-data">Project 2</a>, you already have the geometry (a <code>Float32Array</code> of 2D coordinates) in a VBO, and a VAO that is currently bound. Now you need to build the program to process that data.
 </p>
 
 <strong>Project Specifications:</strong>
