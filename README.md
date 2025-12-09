@@ -1593,13 +1593,7 @@ Want to share your progress, ask questions, provide feedback, or share your favo
 
 # Next steps
 
-Now that you have the irreducible minimum of the programmable geometry pipeline memorized, you are ready to build. You can use the following resources to apply your skills to advanced procedural generation, to deepen your theoretical understanding, or to solve specific implementation problems.
-
-* **[RMF Engine](https://github.com/GregStanton/proposal-rmf-engine):**
-
-  * _What it is:_ A high-fidelity computational engine and API for creative coding, supporting sweep geometries (brushes, ribbons, tubes) and motion rails (camera trajectories, write-on effects, choreographed motion) .
-
-  * _How to use it:_ This is the perfect capstone project to test your new skills, with significant real-world benefits. You can help flesh out the proof of concept, or implement the spec in your favorite creative-coding library. This path is for the bold, as you will need to develop the necessary mathematical skills if you don't yet have them.
+Now that you have the irreducible minimum of the programmable geometry pipeline memorized, you are ready to build. You can use the following resources to apply your skills to solve specific implementation problems, to deepen your theoretical understanding, or to build advanced procedural engines.
 
 * **[WebGL2 Fundamentals](https://webgl2fundamentals.org/):**
 
@@ -1618,6 +1612,12 @@ Now that you have the irreducible minimum of the programmable geometry pipeline 
   * _What it is:_ A deep dive into modern graphics theory (written for C++).
 
   * _How to use it:_ Use this for theory. If you want to understand the physics behind Physically Based Rendering (PBR) or the complex mathematics of lighting models, this is the industry standard.
+
+* **[RMF Engine](https://github.com/GregStanton/proposal-rmf-engine):**
+
+  * _What it is:_ A high-fidelity computational engine and API for creative coding, supporting sweep geometries (brushes, ribbons, tubes) and motion rails (camera trajectories, write-on effects, choreographed motion) .
+
+  * _How to use it:_ This is the perfect capstone project to test your new skills, with significant real-world benefits. You can help flesh out the proof of concept, or implement the spec in your favorite creative-coding library. This path is for the bold, as you will need to develop the necessary mathematical skills if you don't yet have them.
 
 # Citation & license
 
