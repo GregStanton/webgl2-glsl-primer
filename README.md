@@ -1303,7 +1303,7 @@ function draw(timestamp) {
 
 **Approach:** To allow distinct colors for each face, you may duplicate vertices. There will then be 36 vertices total: 6 faces $\times$ 2 triangles $\times$ 3 vertices.
 
-Specifications:
+**Specifications:**
 
 1. **State Management:**
    * Enable the depth test and face culling.
@@ -1592,8 +1592,6 @@ function createProgram(gl, vsSource, fsSource) {
 
 Now that you have the irreducible minimum of the programmable geometry pipeline memorized, you are ready to build. You can use the following resources to apply your skills to advanced procedural generation, to deepen your theoretical understanding, or to solve specific implementation problems.
 
-
-
 * **[RMF Engine](https://github.com/GregStanton/proposal-rmf-engine):**
 
   * _What it is:_ A high-fidelity computational engine and API for creative coding, supporting sweep geometries (brushes, ribbons, tubes) and motion rails (camera trajectories, write-on effects, choreographed motion) .
@@ -1624,4 +1622,4 @@ Now that you have the irreducible minimum of the programmable geometry pipeline 
 
 If you found this guide helpful and wish to reference it, please include the following citation:
 
-> [*WebGL2 & GLSL primer: A zero-to-hero, spaced-repetition guide*](https://github.com/GregStanton/proposal-rmf-engine/blob/main/docs/webgl2-and-glsl-primer.md) by Greg Stanton (2025), licensed under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
+> [*WebGL2 & GLSL primer: A zero-to-hero, spaced-repetition guide*](https://github.com/GregStanton/webgl2-glsl-primer) by Greg Stanton (2025), licensed under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
