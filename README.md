@@ -1263,7 +1263,7 @@ Time for some 3D action!
 <details> <summary><strong>Q:</strong> Why must a program be in use before setting any uniforms? </summary> <p><strong>A:</strong> Uniforms are global to the <em>program object</em> and are stored in that object, not in the global WebGL state. (WebGL needs to know <em>which</em> program's memory you intend to update.)</p> </details>
 
 <details>
-<summary><strong>Q:</strong> WebGL clip space is left-handed ($+z$ into screen). However, the popular <code>glMatrix</code> matrix library uses a right-handed system ($+z$ towards viewer), which aligns with standard mathematical conventions. Which matrix in <code>glMatrix</code> handles the conversion between them?</summary>
+<summary><strong>Q:</strong> WebGL clip space is left handed ($+z$ into screen). However, the popular <code>glMatrix</code> matrix library uses a right-handed system ($+z$ towards viewer), which aligns with standard mathematical conventions. Which matrix in <code>glMatrix</code> handles the conversion between them?</summary>
 <p><strong>A:</strong> The projection matrix (it flips the $z$-axis).</p>
 </details>
 
