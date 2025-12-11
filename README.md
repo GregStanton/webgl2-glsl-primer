@@ -262,7 +262,7 @@ Now we zoom out, to understand the context in which our shaders are situated.
 <details> <summary><strong>Q:</strong> What's the benefit of running shaders on GPUs?</summary><p><strong>A:</strong> A shader that computes a single position or color can be run for thousands of vertices or fragments in parallel.</p><p><strong>Hint:</strong> If you have ten chefs plating dishes vs. a thousand line cooks plating dishes, which will win a race to plate <em>one million</em> dumplings?</p></details>
 
 ## Pipeline basics
-Now that we understand the basic concepts of shaders, and of the software and hardware that power them, we consider how shader execution is organized.
+Now that we understand the basic idea of shaders, and key aspects of the software and hardware that power them, we consider how shader execution is organized.
 
 <details>
 <summary><strong>Q:</strong> The graphics pipeline can be understood through which two complementary perspectives?</summary>
