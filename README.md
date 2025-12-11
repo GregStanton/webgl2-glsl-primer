@@ -561,12 +561,12 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 </details>
 
 <details>
-<summary><strong>Q:</strong> In WebGL, what is the range of x, y, and z in NDC space?</summary>
+<summary><strong>Q:</strong> In WebGL, what is the range of $x$, $y$, and $z$ in NDC space?</summary>
 <p><strong>A:</strong> -1.0 to 1.0.</p>
 </details>
 
 <details>
-<summary><strong>Q:</strong> In WebGL Normalized Device Coordinates (NDC), where is the origin (0,0)?</summary>
+<summary><strong>Q:</strong> In WebGL Normalized Device Coordinates (NDC), where is the origin $(0,0,0)$?</summary>
 <p><strong>A:</strong> The center.</p>
 </details>
 
