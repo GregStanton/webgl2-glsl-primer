@@ -181,20 +181,27 @@ We begin by defining basic terms, and the core software units that process our g
 
 <details>
 <summary><strong>Q:</strong> What does a vertex shader do?</summary>
-<p><strong>A:</strong> It computes vertex positions. (These determine where geometric primitives are rendered on the screen.)</p>
+<p><strong>A:</strong> It computes a vertex position.</p>
 <p><strong>Source:</strong> <a href="https://webgl2fundamentals.org/webgl/lessons/webgl-fundamentals.html">WebGL2 Fundamentals</a></p>
 </details>
 
 <details>
 <summary><strong>Q:</strong> What does a fragment shader do?</summary>
-<p><strong>A:</strong> It computes fragment colors.</p>
+<p><strong>A:</strong> It computes a fragment color.</p>
 <p><strong>Source:</strong> <a href="https://webgl2fundamentals.org/webgl/lessons/webgl-fundamentals.html">WebGL2 Fundamentals</a></p>
 </details>
 
 <details>
-<summary><strong>Q:</strong> Vertex shaders and fragment shaders are code units of what type? (Are they modules, objects, functions, or something else?)</summary>
-<p><strong>A:</strong> They’re functions.</p>
+<summary><strong>Q:</strong> Conceptually, the execution of a vertex or fragment shader behaves like what standard programming structure? (A loop, an object, or a function?)</summary>
+<p><strong>A:</strong> A function.</p>
+<p><strong>Note:</strong> While WebGL wraps this code in a <em>shader object</em>, the code itself defines a single function.</p>
 <p><strong>Source:</strong> <a href="https://webgl2fundamentals.org/webgl/lessons/webgl-fundamentals.html">WebGL2 Fundamentals</a></p>
+</details>
+
+<details>
+<summary><strong>Q:</strong> If a shader only computes one vertex position or one fragment color, why does a WebGL program consist of only two shaders?</summary>
+<p><strong>A:</strong> The vertex shader is executed for every single vertex, and the fragment shader is executed for every single fragment.</p>
+<p><strong>Source:</strong> <a href="https://webgl2fundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html">WebGL2 Fundamentals</a></p>
 </details>
 
 ## Software and hardware
