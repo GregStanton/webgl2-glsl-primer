@@ -101,7 +101,7 @@ We'll be directly dealing with normalized device coordinates early on. WebGL aut
 <img 
   width="503" 
   height="440" 
-  alt = "A cubic space, with a coordinate system whose origin is at the center of the cube. A horizontal axis points right, a vertical axis points up, and a depth axis points away. Values along each axis range between -1 and 1."
+  alt="A cubic space, with a coordinate system whose origin is at the center of the cube. A horizontal axis points right, a vertical axis points up, and a depth axis points away. Values along each axis range between -1 and 1."
   src="https://github.com/user-attachments/assets/ea261f7e-18ed-4141-81fd-3e6de54513ce"
 />
 
@@ -558,7 +558,7 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 
 <details>
 <summary><strong>Q:</strong> In WebGL Normalized Device Coordinates (NDC), in which direction do the x, y, and z axes point?</summary>
-<p><strong>A:</strong> Directions: x points right, y points up, and z points away (directionally, into the screen). (Hint: The xy-plane follows mathematical conventions: x points right and y points up. However, it’s a left handed system.)</p>
+<p><strong>A:</strong> Directions: x points right, y points up, and z points away (directionally, into the screen). (Hint: The xy-plane follows mathematical conventions: x points right and y points up. However, it’s a left-handed system.)</p>
 </details>
 
 <details>
@@ -1539,7 +1539,7 @@ function draw(timestamp) {
 
   // Rotate based on elapsed time (0.001 converts ms to seconds)
   glMatrix.mat4.identity(uModel); 
-  glMatrix.mat4.rotate(uModel, uModel, elapsedTime * 0.001, axis)
+  glMatrix.mat4.rotate(uModel, uModel, elapsedTime * 0.001, axis);
   gl.uniformMatrix4fv(uModelLocation, false, uModel);
 
   gl.drawArrays(gl.TRIANGLES, 0, 36);
