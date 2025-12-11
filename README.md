@@ -264,10 +264,7 @@ Now we zoom out, to understand the context in which our shaders are situated.
 ## Pipeline basics
 Now that we understand the basic idea of shaders, and key aspects of the software and hardware that power them, we consider how shader execution is organized.
 
-<details>
-<summary><strong>Q:</strong> The graphics pipeline can be understood through which two complementary perspectives?</summary>
-<p><strong>A:</strong> The coordinate pipeline (mathematical spaces) and the execution pipeline (hardware stages).</p>
-</details>
+<details> <summary><strong>Q:</strong> The programmable geometry pipeline consists of which two interacting sequences?</summary> <p><strong>A:</strong> The <strong>execution pipeline</strong> (hardware stages) and the <strong>coordinate pipeline</strong> (spatial transformations).</p> </details>
 
 <details> <summary><strong>Q:</strong> In 3D graphics, what is the standard sequence of <em>spaces</em> in the coordinate pipeline? List them in order.</summary> <p><strong>A:</strong></p> <ol> <li><strong>Local space</strong> (coordinates relative to an object's origin) </li> <li><strong>World space</strong> (coordinates relative to the origin of the world in which objects are placed) </li> <li><strong>View space</strong> (coordinates relative to the camera/eye) </li> <li><strong>Clip space</strong> (coordinates accounting for the eye's field of vision) </li> <li><strong>Screen space</strong> (coordinates for the physical viewport)</li></ol></details>
 
