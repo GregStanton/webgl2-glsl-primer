@@ -588,6 +588,8 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 
 <details> <summary><strong>Q:</strong> What syntax explicitly configures the viewport transform?</summary> <p><strong>A:</strong> <code>gl.viewport(x, y, width, height)</code>, where the <code>x</code> and <code>y</code> parameters are the lower-left corner of the viewport, and the other parameters are the viewport's dimensions.</p> </details>
 
+<details> <summary><strong>Q:</strong> In WebGL, the <code>x</code> and <code>y</code> parameters of <code>gl.viewport()</code> are measured in pixels relative to which corner of the canvas?</summary> <p><strong>A:</strong> The bottom-left corner.</p> <p><strong>Hint:</strong> This is the standard Cartesian origin, but it differs from the standard HTML coordinate system (which starts at the top-left).</p></details>
+
 ## Pipeline details
 
 <details> <summary><strong>Q:</strong> In WebGL, what steps happen automatically in the execution pipeline, after the vertex shader and before perspective division? Name but do not describe them.</summary> <p><strong>A:</strong></p> <ol><li>Primitive assembly</li><li> Clipping</li></ol></details>
