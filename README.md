@@ -670,6 +670,14 @@ gl.bufferData(gl.ARRAY_BUFFER, triangleVertices, gl.STATIC_DRAW);
 <p><strong>A:</strong> <code>vec4(pos, 0.0, 1.0)</code></p>
 </details>
 
+## Attribute interpolation
+
+<details><summary><strong>Q:</strong> In mathematics, what is <em>interpolation</em>?</summary> <p><strong>A:</strong> Interpolation refers to determining an <em>inter</em>mediate value between two given values (e.g. finding a position between points A and B that's 40% of the distance from A to B).</p></details>
+
+<details><summary><strong>Q:</strong> What's an example of an attribute that needs to be interpolated between vertices?</summary><p><strong>A:</strong> A color. (Other typical examples are normal vectors or texture coordinates.) </p></details>
+
+<details><summary><strong>Q:</strong> Why might a color need to be interpolated between vertices?</summary><p><strong>A:</strong> If two vertices each have their own color, then this color may need to be interpolated in order to associate a color with a fragment in between them.</p></details>
+
 ## Shader syntax
 
 <details>
