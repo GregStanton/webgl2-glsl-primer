@@ -1398,7 +1398,7 @@ function draw(timestamp) {
 4. **Render Loop:**
     * Use `requestAnimationFrame`.
     * Clear both color and depth buffers.
-    * Update the model matrix (rotate it slightly every frame with `mat4.rotate`).
+    * Update the model matrix (rotate it slightly every frame around a unit-length axis vector using `mat4.rotate`).
     * Upload the model matrix via `gl.uniformMatrix4fv`.
     * Draw 36 vertices using `gl.TRIANGLES`.
 
