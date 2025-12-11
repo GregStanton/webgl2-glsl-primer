@@ -608,7 +608,7 @@ This project is continued from [Project 1](#project-1-colored-canvas).
 
 <p>
   <strong>Problem:</strong>
-  Extend your `yellow-canvas.js` program so that it defines a triangle as a flat array of three $(x, y)$ vertices. Create and bind a VAO and VBO, and upload the triangle data to the VBO. Assume the triangle data will not change after it’s uploaded. (We won't render the triangle yet. We'll do that in the next project.)
+  Extend your <code>yellow-canvas.js</code> program so that it defines a triangle as a flat array of three $(x, y)$ vertices. Create and bind a VAO and VBO, and upload the triangle data to the VBO. Assume the triangle data will not change after it’s uploaded. (We won't render the triangle yet. We'll do that in the next project.)
 </p>
 
 <details>
