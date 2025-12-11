@@ -572,7 +572,7 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 
 <details>
 <summary><strong>Q:</strong> In WebGL Normalized Device Coordinates (NDC), in which direction do the $x$, $y$, and $z$ axes point?</summary>
-<p><strong>A:</strong> Directions: $x$ points right, $y$ points up, and $z$ points away (directionally, into the screen).</p><p><strong>Hint:</strong> The xy-plane follows mathematical conventions: $x$ points right and $y$ points up. However, it’s a left-handed system.</p>
+<p><strong>A:</strong> Directions: $x$ points right, $y$ points up, and $z$ points away (directionally, into the screen).</p><p><strong>Hint:</strong> The xy-plane follows mathematical conventions ($x$ points right and $y$ points up). However, it’s a left-handed system.</p>
 </details>
 
 <details>
