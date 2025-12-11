@@ -225,9 +225,9 @@ Now we zoom out, to understand the context in which our shaders are situated.
 </details>
 
 <details>
-<summary><strong>Q:</strong> In WebGL, what language is used specifically to code vertex shaders and fragment shaders?</summary>
+<summary><strong>Q:</strong> In WebGL2, what language is used specifically to code vertex shaders and fragment shaders?</summary>
 <p><strong>A:</strong> GLSL (OpenGL Shading Language)</p>
-<p><strong>Note:</strong> More precisely, WebGL uses GLSL ES, which is a bit different.</p>
+<p><strong>Note:</strong> More precisely, WebGL2 uses GLSL ES 3.00.</p>
 <p><strong>Source:</strong> <a href="https://webgl2fundamentals.org/webgl/lessons/webgl-fundamentals.html">WebGL2 Fundamentals</a>, <a href="https://en.wikipedia.org/wiki/OpenGL_Shading_Language">OpenGL Shading Language - Wikipedia</a></p>
 </details>
 
