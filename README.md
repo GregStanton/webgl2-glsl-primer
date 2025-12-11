@@ -12,7 +12,28 @@ Fundamentals of WebGL2 and GLSL are introduced in a natural order, chunking conc
 The material focuses on the _programmable geometry pipeline_—creating form and color through code, logic, and mathematics. It covers the irreducible minimum required to build a 3D engine from scratch. While it establishes the foundation for all graphics tasks, it does not cover external asset management (like texture image loading), focusing instead on the state machine and the vertex/fragment logic essential for procedural graphics and tools like the [RMF Engine](https://github.com/GregStanton/proposal-rmf-engine) designed by this primer's author. It's self contained, with intuitive explanations of the mathematical prerequisites. Recommendations on leveraging the covered skills are provided at the end, including an annotated list of links to high-quality projects and advanced resources.
 
 # Background
-Before diving into the programmable geometry pipeline, we'll make sure we have the prerequisite concepts and skills in place.
+Before diving into the programmable geometry pipeline, we'll make sure we know the lay of the land, and that we have the prerequisite concepts and skills in place.
+
+## The landscape: Browser-based, hardware-accelerated graphics
+While this primer focuses on WebGL2 (a.k.a. WebGL 2.0) and GLSL, it's helpful to understand how these technologies fit within the broader landscape, which includes two related Web APIs, each capable of both 2D and 3D graphics. The computational demands of 3D graphics means that these APIs are designed to leverage GPUs, efficient hardware that's shipped in virtually all devices manufactured since the late 2000s (phones, tablets, laptops, desktops).
+
+* **WebGL and GLSL**
+  * **Current lingua franca** for hardware-accelerated graphics on the web
+  * **Wide employer demand**, indicating extensive current usage
+  * **Mature support in all major browsers** (since 2014 for 1.0, 2022 for 2.0), indicating a large ecosystem
+* **WebGPU and WGSL**
+  * **Emerging tech** meant as an _eventual_ WebGL replacement, for graphics, computation, and native-feeling apps (e.g., via Electron)
+  * **Nascent employer demand** for innovation, and adaptation of WebGL code
+  * **Initial support in all major browsers** (as of mid-2025), with production deployments under development but impeded by significant inconsistencies, limitations, and bugs across browser implementations, operating systems, and hardware platforms
+
+**Common characteristics:**  
+Both use the same graphics concepts, meaning that learning one makes it easier to learn the other. Both are significantly lower-level technologies relative to typical JavaScript development, as they offer direct interaction with the underlying GPU hardware.
+
+**Coexistence likely for 5–10 years or more:**  
+Libraries and applications with dual-backend architectures will likely be typical for at least five to ten years, and possibly longer, similar to the gradual rollout of WebGL and the coexistence of WebGL 1.0 and 2.0.
+
+**Updates to this section are welcome:**  
+As the landscape evolves, pull requests that incorporate major updates to this background section will be welcome.
 
 ## Prerequisite topics
 Prerequisites include both programming and math.
