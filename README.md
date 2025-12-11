@@ -285,7 +285,7 @@ vertex shader  -->  rasterization  -->  fragment shader  -->  fragment processin
 <details> <summary><strong>Q:</strong> Does the coordinate pipeline span the entire execution pipeline?</summary> <p><strong>A:</strong> No. The coordinate pipeline finishes just before rasterization begins.</p> <p><strong>Hint:</strong> The viewport transform at the end of the coordinate pipeline gets geometry into screen space; right after that, it's possible to identify fragments of primitives that cover particular pixels.</p> </details>
 
 ## Access syntax
-Now we learn how to access the world we just described.
+Now we learn how to access the world of WebGL2 that we just described.
 
 <details>
 <summary><strong>Q:</strong> In the DOM, what HTML element provides the drawing surface for WebGL?</summary>
