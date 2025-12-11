@@ -525,23 +525,30 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 </details>
 
 <details>
+<summary><strong>Q:</strong> In a WebGL vertex shader, if you define an attribute as a <code>vec4</code> but only provide (x, y) data from the buffer, what values are automatically assigned to z and w?</summary>
+<p><strong>A:</strong> <code>z</code> = 0.0, <code>w</code> = 1.0. (Hint: Recall that a w-coordinate of 1 makes the vertex a point, rather than a direction, i.e. it is affected by translations.)</p>
+</details>
+
+## Fixed-function coordinate transforms
+
+<details>
 <summary><strong>Q:</strong> In WebGL, vertex coordinates in clip space are automatically converted to what space, after the vertex shader runs?</summary>
 <p><strong>A:</strong> NDC space (normalized device coordinates).</p>
 </details>
 
 <details>
-<summary><strong>Q:</strong> In WebGL, what operation sends clip space to NDC space?</summary>
-<p><strong>A:</strong> Perspective division: The point (x, y, z, w) is divided by w.</p>
+<summary><strong>Q:</strong> In WebGL, what operation sends clip space to NDC space? Name it.</summary>
+<p><strong>A:</strong> Perspective division.</p>
+</details>
+
+<details>
+<summary><strong>Q:</strong> In WebGL, what operation sends clip space to NDC space? Specify the input and output.</summary>
+<p><strong>A:</strong> $(x, y, z, w) \mapsto (\frac{x}{w}, \frac{y}{w}, \frac{z}{w})$</p>
 </details>
 
 <details>
 <summary><strong>Q:</strong> In WebGL, what is the range of x, y, and z in NDC space?</summary>
 <p><strong>A:</strong> -1.0 to 1.0.</p>
-</details>
-
-<details>
-<summary><strong>Q:</strong> In a WebGL vertex shader, if you define an attribute as a <code>vec4</code> but only provide (x, y) data from the buffer, what values are automatically assigned to z and w?</summary>
-<p><strong>A:</strong> <code>z</code> = 0.0, <code>w</code> = 1.0. (Hint: Recall that a w-coordinate of 1 makes the vertex a point, rather than a direction, i.e. it is affected by translations.)</p>
 </details>
 
 <details>
@@ -566,15 +573,32 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 
 <details>
 <summary><strong>Q:</strong> In WebGL, what are the source and target spaces of the viewport transform?</summary>
-<p><strong>A:</strong> NDC $\to$ screen space.</p>
+<p><strong>A:</strong> NDC $\to$ screen space.</p><p><strong>Note:</strong> The source space is sometimes identified informally as clip space, which is the last space the user deals with prior to application of the viewport transform. However, 4D clip space is converted automatically (during a fixed-function stage) to 3D NDC space before the viewport transform is applied.</p>
+</details>
+
+<details>
+<summary><strong>Q:</strong> In web graphics, what is the difference between a viewport and a canvas, if any?</summary>
+<p><strong>A:</strong> The viewport is the rectangular portion of the canvas that is rendered to (e.g., if a canvas is too large to show, the viewport may be smaller and may have scroll bars).</p>
 </details>
 
 <details>
 <summary><strong>Q:</strong> Conceptually, what does the viewport transform do in WebGL?</summary>
-<p><strong>A:</strong> It stretches NDC space so that its x and y dimensions match those of the canvas, and it converts z-values from NDC space (in $[-1, 1]$) to depth values (in $[0, 1]$ by default).</p>
+<p><strong>A:</strong> It scales and translates NDC space to match the dimensions and position of the viewport, and it converts z-values from NDC space (in $[-1, 1]$) to depth values (in $[0, 1]$ by default).</p>
 </details>
 
-<details> <summary><strong>Q:</strong> What syntax explicitly configures the viewport transform?</summary> <p><strong>A:</strong> <code>gl.viewport(x, y, width, height)</code>, where the <code>x</code> and <code>y</code> parameters are the lower-left corner of the rendering area relative to the canvas, and the other parameters are the rendering area's dimensions.</p> </details>
+<details> <summary><strong>Q:</strong> What syntax explicitly configures the viewport transform?</summary> <p><strong>A:</strong> <code>gl.viewport(x, y, width, height)</code>, where the <code>x</code> and <code>y</code> parameters are the lower-left corner of the viewport, and the other parameters are the viewport's dimensions.</p> </details>
+
+## Pipeline details
+
+<details> <summary><strong>Q:</strong> In WebGL, what steps happen automatically in the execution pipeline, after the vertex shader and before perspective division? Name but do not describe them.</summary> <p><strong>A:</strong></p> <ol><li>Primitive assembly</li><li> Clipping</li></ol></details>
+
+<details> <summary><strong>Q:</strong> In the WebGL execution pipeline, why might primitive assembly be necessary? Give a simple example. </summary> <p><strong>A:</strong> Two vertices may be interpreted as disconnected points or a single line segment.</p></details>
+
+<details> <summary><strong>Q:</strong> In WebGL, why might primitives be assembled prior to clipping? Answer with a simple example. </summary> <p><strong>A:</strong> Imagine a paper triangle is pinned to a rectangular corkboard, and one of its vertices extends off the corkboard's edge. You clip the offending portion with scissors. This gives the triangle an extra edge and two new vertices. WebGL adds extra vertices like these automatically, but that requires it to know the clipped vertex was part of a triangle.</p></details>
+
+<details> <summary><strong>Q:</strong> In WebGL, why might clipping occur prior to perspective division?</summary> <p><strong>A:</strong> There's no sense in performing calculations for vertices that won't make it into the final scene.</p></details>
+
+<details> <summary><strong>Q:</strong> In WebGL, what steps happen between the vertex shader and rasterization? List them in order.</summary> <p><strong>A:</strong></p> <ol> <li> Primitive assembly (primitives must be assembled before they can be clipped)</li><li>Clipping (clipping prior to perspective division eliminates unnecessary computation)</li><li>Perspective division (this converts 4D coordinates to familiar 3D coordinates)</li><li>Viewport transform (this maps 3D vector geometry to the screen so it can be rasterized, i.e. fragmented according to the pixels it covers)</li></ol></details>
 
 ## Project 2: Create and bind VBO and VAO, supply triangle data
 
