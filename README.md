@@ -127,7 +127,7 @@ Hints should be included on the _back_ of a card (along with the answer), rather
 # Introduction
 As with all sections of this primer, the current introductory section is self contained. Since the concepts covered here are foundational, sources are provided. Anyone hungry for additional context on subsequent sections will be well served by the [MDN WebGL Reference](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API), the [OpenGL ES 3.0 Specification](https://registry.khronos.org/OpenGL/specs/es/3.0/es_spec_3.0.pdf), and [The OpenGL ES® Shading Language 3.00.6](https://registry.khronos.org/OpenGL/specs/es/3.0/GLSL_ES_Specification_3.00.pdf).
 
-## Shaders
+## Shader basics
 We begin by defining the core software units that process our geometry.
 
 <details>
@@ -251,19 +251,25 @@ Now we zoom out, to understand the context in which our shaders are situated.
 
 <details> <summary><strong>Q:</strong> What's the benefit of running shaders on GPUs?</summary><p><strong>A:</strong> A shader that computes a single position or color can be run for thousands of vertices or fragments in parallel.</p><p><strong>Hint:</strong> If you have ten chefs plating dishes vs. a thousand line cooks plating dishes, which will win a race to plate <em>one million</em> dumplings?</p></details>
 
-## Pipelines
-Now that we understand the most basic concepts of shaders, and the software and hardware that power them, we consider how these two engines organize their execution.
+## Pipeline basics
+Now that we understand the basic concepts of shaders, and of the software and hardware that power them, we consider how shader execution is organized.
 
 <details>
 <summary><strong>Q:</strong> The graphics pipeline can be understood through which two complementary perspectives?</summary>
 <p><strong>A:</strong> The coordinate pipeline (mathematical spaces) and the execution pipeline (hardware stages).</p>
 </details>
 
-<details> <summary><strong>Q:</strong> In 3D graphics, what is the standard sequence of stages in the coordinate pipeline? (List them in order.)</summary> <p><strong>A:</strong></p> <ol> <li><strong>Local space</strong> (coordinates relative to an object's origin) </li> <li><strong>World space</strong> (coordinates relative to the origin of the world in which objects are placed) </li> <li><strong>View space</strong> (coordinates relative to the camera/eye) </li> <li><strong>Clip space</strong> (coordinates accounting for the eye's field of vision) </li> <li><strong>Screen space</strong> (coordinates for the physical viewport)</li></ol></details>
+<details> <summary><strong>Q:</strong> In 3D graphics, what is the standard sequence of <em>spaces</em> in the coordinate pipeline? List them in order.</summary> <p><strong>A:</strong></p> <ol> <li><strong>Local space</strong> (coordinates relative to an object's origin) </li> <li><strong>World space</strong> (coordinates relative to the origin of the world in which objects are placed) </li> <li><strong>View space</strong> (coordinates relative to the camera/eye) </li> <li><strong>Clip space</strong> (coordinates accounting for the eye's field of vision) </li> <li><strong>Screen space</strong> (coordinates for the physical viewport)</li></ol></details>
+
+<details> <summary><strong>Q:</strong> In 3D graphics, what is the standard sequence of <em>transforms</em> in the coordinate pipeline? List them in order, with their source and target spaces.</summary> <p><strong>A:</strong></p> <ol> <li><strong>Model transform</strong> (local $\to$ world) </li> <li><strong>View transform</strong> (world $\to$ view) </li> <li><strong>Projection transform</strong> (view $\to$ clip) </li> <li><strong>Viewport transform</strong> (clip $\to$ screen)</li></ol><p><strong>Note:</strong> A technical distinction must be made regarding the viewport transform's source space. This is clarified in a separate card.</p></details>
 
 <details> <summary><strong>Q:</strong> What is rasterization?</summary> <p><strong>A:</strong> The process of converting vector geometry (points, lines, triangles) into fragments.</p> </details>
 
-<details> <summary><strong>Q:</strong> In WebGL, what are the main stages of the execution pipeline? (List them in order.)</summary> <p><strong>A:</strong></p> <ol> <li><strong>Vertex shader</strong> (positions the geometry) </li> <li><strong>Rasterization</strong> (converts vector geometry into fragments)</li> <li><strong>Fragment shader</strong> (computes the color of each fragment) </li> <li><strong>Fragment processing</strong> (determines how fragments translate into pixels)</li> </ol> </details>
+<details> <summary><strong>Q:</strong> In WebGL, what are the main stages of the <em>execution</em> pipeline? (List them in order.)</summary> <p><strong>A:</strong></p> <ol> <li><strong>Vertex shader</strong> (positions the geometry) </li> <li><strong>Rasterization</strong> (converts vector geometry into fragments)</li> <li><strong>Fragment shader</strong> (computes the color of each fragment) </li> <li><strong>Fragment processing</strong> (determines how fragments translate into pixels)</li> </ol> </details>
+
+<details> <summary><strong>Q:</strong> When referring to a graphics pipeline, what does the term “fixed function” mean?</summary> <p><strong>A:</strong> It refers to operations in the pipeline that are not programmable by the user, as they are pre-programmed into the hardware (or driver).</p></details>
+
+<details> <summary><strong>Q:</strong> In WebGL, how does the coordinate pipeline fit into the execution pipeline? Answer in terms of coordinate <em>spaces</em>.</summary> <p><strong>A:</strong></p> <ol> <li><strong>Local $\to$ clip</strong> (vertex shader) </li> <li><strong>Clip $\to$ screen</strong> (fixed-function hardware steps prior to rasterization)</li></ol></details>
 
 ## Access syntax
 Now we learn how to access the world we just described.
