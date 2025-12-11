@@ -145,7 +145,7 @@ We begin by defining the core software units that process our geometry.
 
 <details>
 <summary><strong>Q:</strong> In computer graphics, what is a fragment?</summary>
-<p><strong>A:</strong> It's a potential pixel. (For example, if part of a line is behind an opaque triangle, the obscured _fragments_ of that line will be discarded, and won't end up coloring a pixel on the screen.) </p>
+<p><strong>A:</strong> It's a potential pixel. (For example, if part of a line is behind an opaque triangle, the obscured <em>fragments</em> of that line will be discarded, and won't end up coloring a pixel on the screen.) </p>
 <p><strong>Source:</strong> <a href="https://en.wikipedia.org/wiki/Fragment_(computer_graphics)">Fragment (computer graphics) - Wikipedia</a></p>
 </details>
 
