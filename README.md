@@ -701,7 +701,7 @@ const shader = `#version 300 es
 </details>
 
 <details>
-<summary><strong>Q:</strong> What special built-in variable must the Vertex Shader write to?</summary>
+<summary><strong>Q:</strong> What special built-in variable must the vertex shader write to?</summary>
 <p><strong>A:</strong> <code>gl_Position</code></p>
 </details>
 
