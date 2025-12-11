@@ -302,7 +302,7 @@ Now we learn how to access the world we just described.
 <p><strong>A:</strong> <code>CanvasRenderingContext2D</code>.</p>
 </details>
 
-# Hello canvas
+# 🎨 Hello canvas
 It’s time to make our first project! We just need to learn a few additional concepts.
 
 ## Colors and buffers
@@ -398,7 +398,7 @@ gl.clear(gl.COLOR_BUFFER_BIT);
 ```
 </details>
 
-# Hello triangle
+# 🔺Hello triangle
 Now we'll work toward getting a triangle on the screen. This will take some effort, since we're going to make sure we understand all the low-level boilerplate.
 
 ## Starting the data bridge (getting CPU data onto the GPU)
@@ -1236,7 +1236,7 @@ function createProgram(gl, vsSource, fsSource) {
 ```
 </details>
 
-# Hello spinning cube
+# 🧊 Hello spinning cube
 Time for some 3D action!
 
 ## Uniforms and matrices in GLSL
@@ -1665,10 +1665,13 @@ function createProgram(gl, vsSource, fsSource) {
 
 </details>
 
-# Community & study group
+# Community & next steps
+
+**🤗 Community:**
+
 Want to share your progress, ask questions, provide feedback, or share your favorite resources? Drop a link in the ["Show and tell" discussion thread](https://github.com/GregStanton/webgl2-glsl-primer/discussions/1)!
 
-# Next steps
+**🚀 Next steps:**
 
 Now that you have the irreducible minimum of the programmable geometry pipeline memorized, you are ready to build. You can use the following resources to apply your skills to solve specific implementation problems, to deepen your theoretical understanding, or to build advanced procedural engines.
 
