@@ -264,19 +264,25 @@ Now we zoom out, to understand the context in which our shaders are situated.
 ## Pipeline basics
 Now that we understand the basic idea of shaders, and key aspects of the software and hardware that power them, we consider how shader execution is organized.
 
-<details> <summary><strong>Q:</strong> The programmable geometry pipeline consists of which two interacting sequences?</summary> <p><strong>A:</strong> The <strong>execution pipeline</strong> (hardware stages) and the <strong>coordinate pipeline</strong> (spatial transformations).</p> </details>
+<details> <summary><strong>Q:</strong> The programmable geometry pipeline consists of which two interacting sequences?</summary> <p><strong>A:</strong> The <strong>coordinate pipeline</strong> (mathematical spaces) and the <strong>execution pipeline</strong> (hardware stages).</p> </details>
 
 <details> <summary><strong>Q:</strong> In 3D graphics, what is the standard sequence of <em>spaces</em> in the coordinate pipeline? List them in order.</summary> <p><strong>A:</strong></p> <ol> <li><strong>Local space</strong> (coordinates relative to an object's origin) </li> <li><strong>World space</strong> (coordinates relative to the origin of the world in which objects are placed) </li> <li><strong>View space</strong> (coordinates relative to the camera/eye) </li> <li><strong>Clip space</strong> (coordinates accounting for the eye's field of vision) </li> <li><strong>Screen space</strong> (coordinates for the physical viewport)</li></ol></details>
 
-<details> <summary><strong>Q:</strong> In 3D graphics, what is the standard sequence of <em>transforms</em> in the coordinate pipeline? List them in order, with their source and target spaces.</summary> <p><strong>A:</strong></p> <ol> <li><strong>Model transform</strong> (local $\to$ world) </li> <li><strong>View transform</strong> (world $\to$ view) </li> <li><strong>Projection transform</strong> (view $\to$ clip) </li> <li><strong>Viewport transform</strong> (clip $\to$ screen)</li></ol><p><strong>Note:</strong> A technical distinction must be made regarding the viewport transform's source space. This is clarified in a separate card.</p></details>
+<details> <summary><strong>Q:</strong> In 3D graphics, what is the standard sequence of <em>transforms</em> in the coordinate pipeline? List them in order, with source and target spaces.</summary> <p><strong>A:</strong></p> <ol> <li><strong>Model transform:</strong> local $\to$ world </li> <li><strong>View transform:</strong> world $\to$ view </li> <li><strong>Projection transform:</strong> view $\to$ clip </li> <li><strong>Viewport transform:</strong> clip $\to$ screen</li></ol><p><strong>Note:</strong> A technical distinction must be made regarding the viewport transform's source space. When we cover the details in separate cards, this will be explained.</p></details>
 
 <details> <summary><strong>Q:</strong> What is rasterization?</summary> <p><strong>A:</strong> The process of converting vector geometry (points, lines, triangles) into fragments.</p> </details>
 
-<details> <summary><strong>Q:</strong> In WebGL, what are the main stages of the <em>execution</em> pipeline? (List them in order.)</summary> <p><strong>A:</strong></p> <ol> <li><strong>Vertex shader</strong> (positions the geometry) </li> <li><strong>Rasterization</strong> (converts vector geometry into fragments)</li> <li><strong>Fragment shader</strong> (computes the color of each fragment) </li> <li><strong>Fragment processing</strong> (determines how fragments translate into pixels)</li> </ol> </details>
+<details> <summary><strong>Q:</strong> In WebGL, what are the main stages of the <em>execution</em> pipeline? List them in order.</summary> <p><strong>A:</strong></p><p><strong>Vertex shader</strong> (positions the geometry) <br /> <strong>$\to$ Rasterization</strong> (converts vector geometry into fragments) <br /> <strong>$\to$ Fragment shader</strong> (computes the color of each fragment) <br /> <strong>$\to$ Fragment processing</strong> (determines how fragments translate into pixels)</p><p><strong>Note:</strong> When we cover the details, we'll reveal what's inside the "black box" between the vertex shader and rasterization (see the diagram below).</p> 
 
-<details> <summary><strong>Q:</strong> When referring to a graphics pipeline, what does the term “fixed function” mean?</summary> <p><strong>A:</strong> It refers to operations in the pipeline that are not programmable by the user, as they are pre-programmed into the hardware (or driver).</p></details>
+```
+vertex shader  -->  rasterization  -->  fragment shader  -->  fragment processing
+                ^
+          ("black box")
+```
 
-<details> <summary><strong>Q:</strong> In WebGL, how does the coordinate pipeline fit into the execution pipeline? Answer in terms of coordinate <em>spaces</em>.</summary> <p><strong>A:</strong></p> <ol> <li><strong>Local $\to$ clip</strong> (vertex shader) </li> <li><strong>Clip $\to$ screen</strong> (fixed-function hardware steps prior to rasterization)</li></ol></details>
+</details>
+
+<details> <summary><strong>Q:</strong> Does the coordinate pipeline span the entire execution pipeline?</summary> <p><strong>A:</strong> No. The coordinate pipeline finishes just before rasterization begins.</p> <p><strong>Hint:</strong> The viewport transform at the end of the coordinate pipeline gets geometry into screen space; right after that, it's possible to identify fragments of primitives that cover particular pixels.</p> </details>
 
 ## Access syntax
 Now we learn how to access the world we just described.
@@ -537,6 +543,7 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 </details>
 
 ## Fixed-function coordinate transforms
+<details> <summary><strong>Q:</strong> When referring to a graphics pipeline, what does the term “fixed function” mean?</summary> <p><strong>A:</strong> It refers to operations in the pipeline that are not programmable by the user, as they are pre-programmed into the hardware (or driver).</p></details>
 
 <details>
 <summary><strong>Q:</strong> In WebGL, vertex coordinates in clip space are automatically converted to what space, after the vertex shader runs?</summary>
@@ -607,7 +614,20 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 
 <details> <summary><strong>Q:</strong> In WebGL, why might clipping occur prior to perspective division?</summary> <p><strong>A:</strong> There's no sense in performing calculations for vertices that won't make it into the final scene.</p></details>
 
-<details> <summary><strong>Q:</strong> In WebGL, what steps happen between the vertex shader and rasterization? List them in order.</summary> <p><strong>A:</strong></p> <ol> <li> Primitive assembly (primitives must be assembled before they can be clipped)</li><li>Clipping (clipping prior to perspective division eliminates unnecessary computation)</li><li>Perspective division (this converts 4D coordinates to familiar 3D coordinates)</li><li>Viewport transform (this maps 3D vector geometry to the screen so it can be rasterized, i.e. fragmented according to the pixels it covers)</li></ol></details>
+<details> <summary><strong>Q:</strong> In WebGL, what steps happen between the vertex shader and rasterization? List them in order.</summary> <p><strong>A:</strong></p> <ol> <li> <strong>Primitive assembly</strong> (primitives must be assembled before they can be clipped)</li><li><strong>Clipping</strong> (clipping prior to perspective division eliminates unnecessary computation)</li><li><strong>Perspective division</strong> (this converts 4D coordinates to familiar 3D coordinates)</li><li><strong>Viewport transform</strong> (this maps 3D vector geometry to the screen so it can be rasterized, i.e. fragmented according to the pixels it covers)</li></ol><p><strong>Note:</strong> The full execution pipeline is visualized below. The stages from this card are shown in all capital letters.</p>
+
+```
+vertex shader
+  --> PRIMITIVE ASSEMBLY
+  --> CLIPPING
+  --> PERSPECTIVE DIVISION
+  --> VIEWPORT TRANSFORM
+  --> rasterization
+  --> fragment shader
+  --> fragment processing
+```
+
+</details>
 
 ## Project 2: Create and bind VBO and VAO, supply triangle data
 
