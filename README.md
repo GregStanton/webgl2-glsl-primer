@@ -131,7 +131,7 @@ As with all sections of this primer, the current introductory section is self co
 *Image attributions: ™/®Khronos Group, Public domain; Jim McKeeth, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); both via Wikimedia Commons*
 
 ## Shader basics
-We begin by defining the core software units that process our geometry.
+We begin by defining basic terms, and the core software units that process our geometry.
 
 <details>
 <summary>
