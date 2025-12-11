@@ -5,16 +5,16 @@
 
 This primer takes the reader from _zero_ (no knowledge of WebGL2 or GLSL) to _hero_ (confidence in everything from low-level state management to procedural graphics production). If you want to engineer advanced 2D or 3D graphics, or understand how graphics are implemented under the hood, then this guide is for you.
 
-## Method
+## :brain: Method
 Fundamentals of WebGL2 and GLSL are introduced in a natural order, chunking concepts and syntax into atomic Q&A _cards_. But this is not a typical FAQ or a cheat sheet; this is a learning guide meant to be internalized, in order, with concepts that build cumulatively from the ground up. Once a card has been learned, it can be directly incorporated into spaced-repetition learning software like [Anki](https://apps.ankiweb.net/), which leverages a scientifically-backed algorithm to ensure you remember what you learn, _efficiently_ and _permanently_. Because of the small chunks, you can also make significant progress with just a few minutes of effort per day. To provide practice applying the ideas as soon as they’re introduced, hands-on projects are integrated throughout, with solution code.
 
-## Scope
+## :world_map: Scope
 The material focuses on the _programmable geometry pipeline_—creating form and color through code, logic, and mathematics. It covers the irreducible minimum required to build a 3D engine from scratch. While it establishes the foundation for all graphics tasks, it does not cover external asset management (like texture image loading), focusing instead on the state machine and the vertex/fragment logic essential for procedural graphics and tools like the [RMF Engine](https://github.com/GregStanton/proposal-rmf-engine) designed by this primer's author. It's self contained, with intuitive explanations of the mathematical prerequisites. Recommendations on leveraging the covered skills are provided at the end, including an annotated list of links to high-quality projects and advanced resources.
 
 # Background
 Before diving into the programmable geometry pipeline, we'll make sure we know the lay of the land, and that we have the prerequisite concepts and skills in place.
 
-## The landscape: Browser-based, hardware-accelerated graphics
+## :national_park: The landscape: Browser-based, hardware-accelerated graphics
 While this primer focuses on WebGL2 (a.k.a. WebGL 2.0) and GLSL, it's helpful to understand how these technologies fit within the broader landscape, which includes two related Web APIs, each capable of both 2D and 3D graphics. The computational demands of 3D graphics means that these APIs are designed to leverage GPUs, efficient hardware that's shipped in virtually all devices manufactured since the late 2000s (phones, tablets, laptops, desktops).
 
 * **WebGL and GLSL**
@@ -35,7 +35,7 @@ Libraries and applications with dual-backend architectures will likely be typica
 **Updates to this section are welcome:**  
 As the landscape evolves, pull requests that incorporate major updates to this background section will be welcome.
 
-## Prerequisite topics
+## :closed_book: Prerequisite topics
 Prerequisites include both programming and math.
 
 **Programming:** 
@@ -49,7 +49,7 @@ Simple, concise explanations are provided for the topics below.
 * Homogeneous coordinates in projective geometry
 * Transforms in the standard 3D rendering pipeline
 
-## Prerequisite explanations
+## :open_book: Prerequisite explanations
 
 This section explains the mathematical prerequisites at the level of detail we will need, with references for anyone desiring additional detail.
 
@@ -107,14 +107,14 @@ We'll be directly dealing with normalized device coordinates early on. WebGL aut
 
 *Attribution:* *Image of NDC space (referred to as “clipspace” in original source) appears in [WebGL model view projection - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection) and is licensed under [CC BY SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en).*
 
-## Programming tips
+## :computer: Programming tips
 
 You may find the following knowledge and experience helpful:
 
 * **The notion of a [statically typed language](https://developer.mozilla.org/en-US/docs/Glossary/Static_typing):** It's enough to know that in some languages, it's necessary to explicitly declare variable types&mdash; like `bool` for a Boolean (true or false), or `int` for an integer ($\ldots, -2, -1, 0, 1, 2, \ldots$), or `float` for real numbers (decimal numbers). This may include syntax like `const int myInteger = 10;` instead of `const myInteger = 10;`
 * **Experience creating graphics with a high-level library like [p5.js](https://p5js.org/):** You can dive directly into WebGL2 & GLSL if you like to start with the nitty gritty. However, if you like to start by practicing the high-level concepts, such as making a 3D shape out of triangles without lots of low-level detail, then starting with a library like p5.js is a great option. In that case, this [introduction to coding with p5.js](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) from The Coding Train is an excellent choice.
 
-## Anki tip: Learning lists
+## :memo: Anki tip: Learning lists
 The cards in these notes sometimes have a full list as an answer. Lists tend to be more cognitively demanding and can disrupt mental flow. To mitigate this effect, the list cards include hints to make them easier, but you can customize the approach to your own background using the following list-learning principles:
 
 * Create cards explaining how each list item connects conceptually to the next item (essentially creating a mental **[linked list](https://en.wikipedia.org/wiki/Linked_list)**, a form of **[elaborative encoding](https://en.wikipedia.org/wiki/Elaborative_encoding)** from cognitive science)
