@@ -507,7 +507,7 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 
 <details>
 <summary><strong>Q:</strong> In <code>gl.bufferData(target, data, usage)</code>, the <code>data</code> argument usually has what type?</summary>
-<p><strong>A:</strong> <code>Float32Array</code></p>
+<p><strong>A:</strong> <code>Float32Array</code> (a JavaScript <em>typed array</em>)</p>
 </details>
 
 <details>
