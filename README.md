@@ -587,7 +587,7 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 
 <details>
 <summary><strong>Q:</strong> In WebGL, what are the source and target spaces of the viewport transform?</summary>
-<p><strong>A:</strong> NDC $\to$ screen space.</p><p><strong>Note:</strong> The source space is sometimes identified informally as clip space, which is the last space the user deals with prior to application of the viewport transform. However, 4D clip space is converted automatically (during a fixed-function stage) to 3D NDC space before the viewport transform is applied.</p>
+<p><strong>A:</strong> NDC space $\to$ screen space.</p><p><strong>Note:</strong> The source space is sometimes identified informally as clip space, which is the last space the user deals with prior to application of the viewport transform. However, 4D clip space is converted automatically (during a fixed-function stage) to 3D NDC space before the viewport transform is applied.</p>
 </details>
 
 <details>
