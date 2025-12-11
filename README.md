@@ -124,8 +124,11 @@ The cards in these notes sometimes have a full list as an answer. Lists tend to 
 
 Hints should be included on the _back_ of a card (along with the answer), rather than the front. They serve as a reminder of how to internalize the idea, in case you fail to retrieve it from memory. If you rely on a hint on the front of a card, you may have trouble remembering it without that extra cue.
 
-# Introduction
+# Introduction <a title="™/®Khronos Group, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:WebGL_Logo.svg"><img width="64" alt="The Official WebGL Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/WebGL_Logo.svg/128px-WebGL_Logo.svg.png?20210505165026"></a> <a title="Jim McKeeth, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:GLSL_Logo_(Unofficial).svg"><img width="48" alt="OpenGL Shading Language logo (Unofficial)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/GLSL_Logo_%28Unofficial%29.svg/128px-GLSL_Logo_%28Unofficial%29.svg.png?20250822083621"></a>
+
 As with all sections of this primer, the current introductory section is self contained. Since the concepts covered here are foundational, sources are provided. Anyone hungry for additional context on subsequent sections will be well served by the [MDN WebGL Reference](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API), the [OpenGL ES 3.0 Specification](https://registry.khronos.org/OpenGL/specs/es/3.0/es_spec_3.0.pdf), and [The OpenGL ES® Shading Language 3.00.6](https://registry.khronos.org/OpenGL/specs/es/3.0/GLSL_ES_Specification_3.00.pdf).
+
+*Image attribution: ™/®Khronos Group, Public domain; Jim McKeeth, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); both via Wikimedia Commons*
 
 ## Shader basics
 We begin by defining the core software units that process our geometry.
