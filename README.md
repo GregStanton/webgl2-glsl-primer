@@ -215,7 +215,7 @@ Now we zoom out, to understand the context in which our shaders are situated.
 
 <details>
 <summary><strong>Q:</strong> What software design pattern best describes the behavior of WebGL?</summary>
-<p><strong>A:</strong> A state machine. (You set a state, and it persists until changed).</p>
+<p><strong>A:</strong> A state machine. (You set a state, and it persists until changed.)</p>
 </details>
 
 <details>
