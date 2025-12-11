@@ -257,7 +257,7 @@ Now we zoom out, to understand the context in which our shaders are situated.
 </details>
 
 <details> <summary><strong>Q:</strong> What are <em>cores</em> of a CPU or GPU? Answer with a simple analogy.</summary><p><strong>A:</strong> Cores are like independent brains.</p></details>
-<details> <summary><strong>Q:</strong> What's the main difference between the cores of CPUs (central processing units) and the cores of GPUs (graphics processing units)?</summary><p><strong>A:</strong> CPUs have a few versatile cores, and GPUs have thousands of specialized cores.</p><p><strong>Hint:</strong> A CPU core is like a chef (versatile, few in number), whereas a GPU is like a line cook (specialized, great in number).</p></details>
+<details> <summary><strong>Q:</strong> What's the main difference between the cores of CPUs (central processing units) and the cores of GPUs (graphics processing units)?</summary><p><strong>A:</strong> CPUs have a few versatile cores, and GPUs have thousands of specialized cores.</p><p><strong>Hint:</strong> A CPU core is like a chef (few in number, versatile), whereas a GPU is like a line cook (great in number, specialized).</p></details>
 
 <details> <summary><strong>Q:</strong> What's the benefit of running shaders on GPUs?</summary><p><strong>A:</strong> A shader that computes a single position or color can be run for thousands of vertices or fragments in parallel.</p><p><strong>Hint:</strong> If you have ten chefs plating dishes vs. a thousand line cooks plating dishes, which will win a race to plate <em>one million</em> dumplings?</p></details>
 
