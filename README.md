@@ -525,8 +525,8 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 </details>
 
 <details>
-<summary><strong>Q:</strong> In a WebGL vertex shader, if you define an attribute as a <code>vec4</code> but only provide (x, y) data from the buffer, what values are automatically assigned to z and w?</summary>
-<p><strong>A:</strong> <code>z</code> = 0.0, <code>w</code> = 1.0. (Hint: Recall that a w-coordinate of 1 makes the vertex a point, rather than a direction, i.e. it is affected by translations.)</p>
+<summary><strong>Q:</strong> In a WebGL vertex shader, if you define an attribute as a <code>vec4</code> but only provide $(x, y)$ data from the buffer, what values are automatically assigned to $z$ and $w$?</summary>
+<p><strong>A:</strong> <code>z</code> = 0.0, <code>w</code> = 1.0.</p> <p><strong>Hint:</strong> Recall that a w-coordinate of 1 makes the vertex a point, rather than a direction, i.e. it is affected by translations.</p>
 </details>
 
 ## Fixed-function coordinate transforms
@@ -557,13 +557,13 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 </details>
 
 <details>
-<summary><strong>Q:</strong> In WebGL Normalized Device Coordinates (NDC), in which direction do the x, y, and z axes point?</summary>
-<p><strong>A:</strong> Directions: x points right, y points up, and z points away (directionally, into the screen). (Hint: The xy-plane follows mathematical conventions: x points right and y points up. However, it’s a left-handed system.)</p>
+<summary><strong>Q:</strong> In WebGL Normalized Device Coordinates (NDC), in which direction do the $x$, $y$, and $z$ axes point?</summary>
+<p><strong>A:</strong> Directions: $x$ points right, $y$ points up, and $z$ points away (directionally, into the screen).</p><p><strong>Hint:</strong> The xy-plane follows mathematical conventions: $x$ points right and $y$ points up. However, it’s a left-handed system.</p>
 </details>
 
 <details>
 <summary><strong>Q:</strong> In WebGL, the depth buffer typically contains values in what range?</summary>
-<p><strong>A:</strong> 0.0 to 1.0 (Hint: These are non-negative, as we’d expect of “depth” values, since “depth” implies a distance measured in only one direction. The depth range may be customized, but this is rarely necessary.)</p>
+<p><strong>A:</strong> <code>0.0</code> to <code>1.0</code></p><p><strong>Hint:</strong> These are non-negative, as we’d expect of depth values, since "depth" implies a distance measured in only one direction. The depth range may be customized, but this is rarely necessary.</p>
 </details>
 
 <details>
@@ -713,7 +713,7 @@ const shader = `#version 300 es
 
 <details>
 <summary><strong>Q:</strong> In GLSL, which shader stage requires an explicit precision declaration?</summary>
-<p><strong>A:</strong> The fragment shader. (Hint: If vertices aren’t in the right place, things go wrong, so high precision is mandated for vertex shaders, but lower precision is allowed for fragment shaders, e.g. to avoid draining battery on older mobile devices.)</p>
+<p><strong>A:</strong> The fragment shader.</p><p><strong>Hint:</strong> If vertices aren’t in the right place, things go wrong, so high precision is mandated for vertex shaders, but lower precision is allowed for fragment shaders, e.g. to avoid draining battery on older mobile devices.)</p>
 </details>
 
 <details>
