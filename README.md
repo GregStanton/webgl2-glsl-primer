@@ -128,7 +128,7 @@ Hints should be included on the _back_ of a card (along with the answer), rather
 
 As with all sections of this primer, the current introductory section is self contained. Since the concepts covered here are foundational, sources are provided. Anyone hungry for additional context on subsequent sections will be well served by the [MDN WebGL Reference](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API), the [OpenGL ES 3.0 Specification](https://registry.khronos.org/OpenGL/specs/es/3.0/es_spec_3.0.pdf), and [The OpenGL ES® Shading Language 3.00.6](https://registry.khronos.org/OpenGL/specs/es/3.0/GLSL_ES_Specification_3.00.pdf).
 
-*Image attribution: ™/®Khronos Group, Public domain; Jim McKeeth, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); both via Wikimedia Commons*
+*Image attributions: ™/®Khronos Group, Public domain; Jim McKeeth, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); both via Wikimedia Commons*
 
 ## Shader basics
 We begin by defining the core software units that process our geometry.
