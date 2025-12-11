@@ -1681,9 +1681,9 @@ Now that you have the irreducible minimum of the programmable geometry pipeline 
 
 * **[Learn OpenGL](https://learnopengl.com/):**
 
-  * _What it is:_ A deep dive into modern graphics theory (written for C++).
+  * _What it is:_ A deep dive into foundational graphics theory (written for C++).
 
-  * _How to use it:_ Use this for theory. If you want to understand the physics behind Physically Based Rendering (PBR) or the complex mathematics of lighting models, this is the industry standard.
+  * _How to use it:_ Use this for theory. If you want to understand the physics behind Physically Based Rendering (PBR) or the mathematics of lighting models, this is the industry standard.
 
 * **[RMF Engine](https://github.com/GregStanton/proposal-rmf-engine):**
 
