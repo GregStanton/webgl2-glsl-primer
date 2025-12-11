@@ -497,7 +497,7 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 
 <details>
 <summary><strong>Q:</strong> Can you give a concrete example to indicate the purpose of <code>gl.ELEMENT_ARRAY_BUFFER</code>?</summary>
-<p><strong>A:</strong> Suppose you want to create a quadrilateral from four vertices. This needs to be created out of triangles, and there are two ways to triangulate a quadrilateral. The element array buffer can be used to specify the triangulation, by indicating which vertices should be connected.</p>
+<p><strong>A:</strong> Suppose you want to create a rectangle from four vertices. This needs to be created out of triangles, and there are two ways to triangulate a rectangle. The element array buffer can be used to specify the triangulation, by indicating which vertices should be connected.</p>
 </details>
 
 <details>
