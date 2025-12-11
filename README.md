@@ -23,7 +23,7 @@ While this primer focuses on WebGL2 (a.k.a. WebGL 2.0) and GLSL, it's helpful to
   * **Mature support in all major browsers** (since 2014 for 1.0, 2022 for 2.0), indicating a large ecosystem
 * **WebGPU and WGSL**
   * **Emerging tech** meant as an _eventual_ WebGL replacement, for graphics, computation, and native-feeling apps (e.g., via Electron)
-  * **Nascent employer demand** for innovation, and adaptation of WebGL code
+  * **Nascent employer demand** focused on innovation and adaptation of WebGL code
   * **Initial support in all major browsers** (as of mid-2025), with production deployments under development but impeded by significant inconsistencies, limitations, and bugs across browser implementations, operating systems, and hardware platforms
 
 **Common characteristics:**  
