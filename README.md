@@ -150,7 +150,7 @@ We begin by defining basic terms, and the core software units that process our g
 
 <details>
 <summary><strong>Q:</strong> What mathematical concept unifies points (0D), lines (1D), and triangles (2D)?</summary>
-<p><strong>A:</strong> Each of these is a _simplex_, the simplest n-dimensional shape in its respective dimension.</p>
+<p><strong>A:</strong> Each of these is a <em>simplex</em>, the simplest n-dimensional shape in its respective dimension.</p>
 <p><strong>Note:</strong> This term is not commonly used in graphics, but it's fundamental in mathematics, which is excellent at unifying seemingly disparate ideas.</p>
 <p><strong>Source:</strong> <a href="https://en.wikipedia.org/wiki/Simplex">Simplex - Wikipedia</a></p>
 </details>
