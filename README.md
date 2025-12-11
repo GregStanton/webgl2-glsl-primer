@@ -187,7 +187,7 @@ We begin by defining basic terms, and the core software units that process our g
 
 <details>
 <summary><strong>Q:</strong> What does a fragment shader do?</summary>
-<p><strong>A:</strong> It computes the color of a fragment. (It does this for each fragment in the primitive being drawn.)</p>
+<p><strong>A:</strong> It computes fragment colors.</p>
 <p><strong>Source:</strong> <a href="https://webgl2fundamentals.org/webgl/lessons/webgl-fundamentals.html">WebGL2 Fundamentals</a></p>
 </details>
 
