@@ -1312,7 +1312,7 @@ Time for some 3D action!
 
 <details> <summary><strong>Q:</strong> In WebGL, face culling is applied to triangles if they have what spatial relation to the camera?</summary> <p><strong>A:</strong> The triangles are culled if they are facing away from the camera.</p> <p><strong>Hint:</strong> Imagine that you color a paper triangle red, but if someone flips it over, they'll see it's still white on the other side. That's the back face. WebGL also has a way of determining which face of a triangle is the front and which is the back.</p></details>
 
-<details> <summary><strong>Q:</strong> By default, WebGL determines a triangle is "front-facing" if its vertices are defined in what winding order?</summary> <p><strong>A:</strong> Counter-Clockwise (CCW).</p> <p><strong>Hint:</strong> This is the positive orientation in the xy-plane: starting from the positive x-axis, this direction moves us through Quadrant I first.</p></details>
+<details> <summary><strong>Q:</strong> By default, WebGL determines a triangle is "front-facing" if its vertices are defined in what winding order?</summary> <p><strong>A:</strong> Counter-Clockwise (CCW).</p> <p><strong>Hint:</strong> This is the positive orientation in the xy-plane (starting from the positive x-axis, this direction moves us through Quadrant I first).</p></details>
 
 <details> <summary><strong>Q:</strong> What syntax enables face culling in WebGL?</summary> <p><strong>A:</strong> <code>gl.enable(gl.CULL_FACE)</code></p> </details>
 
