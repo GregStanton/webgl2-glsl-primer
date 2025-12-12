@@ -1041,7 +1041,7 @@ const shader = `#version 300 es
 <li><em>Attach</em> (shaders)</li>
 <li><em>Link</em> (program)</li>
 <li><em>Check</em> (the link status)</li>
-<li>If linking failed, <em>Log</em> (error) and <em>Delete</em> (the program).</li>
+<li>If linking failed, <em>Throw</em> (error) and <em>Delete</em> (the program).</li>
 </ol>
 </details>
 
