@@ -1086,10 +1086,12 @@ const shader = `#version 300 es
 </details>
 
 ## Drawing
+<details> <summary><strong>Q:</strong> In WebGL2, which function actually triggers the execution pipeline to run? Give two possible answers.</summary> <p><strong>A:</strong> <code>gl.drawArrays()</code> or <code>gl.drawElements()</code>.</p> <p><strong>Hint:</strong> Prior to calling one of these functions, you are just setting up state. These commands tell the GPU to actually process the data through the shaders. They're your "go" buttons.</p> </details>
 
 <details>
-<summary><strong>Q:</strong> In the WebGL2 API, what syntax renders primitives?</summary>
-<p><strong>A:</strong> <code>gl.drawArrays(mode, first, count)</code></p>
+<summary><strong>Q:</strong> In the WebGL2 API, what's the signature of <code>gl.drawArrays()</code>?</summary>
+<p><strong>A:</strong> <code>gl.drawArrays(mode, first, count)</code><br />
+<em>Return value:</em> None ( <code>undefined</code>).</p>
 </details>
 
 <details>
@@ -1119,6 +1121,8 @@ const shader = `#version 300 es
 <p><strong>A:</strong> The number of vertices to be processed (rendered).</p>
 </details>
 
+<details> <summary><strong>Q:</strong> If you call <code>gl.drawArrays(mode, 0, 36)</code>, how many times will the vertex shader execute?</summary> <p><strong>A:</strong> 36 times.</p> <p><strong>Hint:</strong> The vertex shader runs once for every vertex specified in the <code>count</code> parameter.</p> </details>
+
 <details>
 <summary><strong>Q:</strong> Before issuing a <code>gl.drawArrays</code> command, what must you tell the GPU, conceptually?</summary>
 <p><strong>A:</strong> You must tell it which shader program to use.</p>
@@ -1128,6 +1132,16 @@ const shader = `#version 300 es
 <summary><strong>Q:</strong> What syntax tells <code>gl.drawArrays</code> which shader program to execute?</summary>
 <p><strong>A:</strong> <code>gl.useProgram(program)</code></p>
 <p><strong>Hint:</strong> This tells the WebGL state machine: "For all subsequent draw calls, use this specific compiled executable."</p>
+</details>
+
+<details>
+<summary><strong>Q:</strong> What's the main technical difference between <code>gl.drawArrays()</code> and <code>gl.drawElements()</code>?</summary>
+<p><strong>A:</strong> <code>gl.drawArrays()</code> uses array buffers (bound to <code>gl.ARRAY_BUFFER</code>) and <code>gl.drawElements()</code> uses <em>element</em> array buffers (bound to <code>gl.ELEMENT_ARRAY_BUFFER</code>).</p>
+</details>
+
+<details>
+<summary><strong>Q:</strong> What's a guideline for deciding between using <code>gl.drawArrays()</code> and <code>gl.drawElements()</code>?</summary>
+<p><strong>A:</strong> Use <code>gl.drawArrays()</code> when there is little to no vertex sharing between primitives (e.g. six vertices for two triangles, each with its own vertices), and use <code>gl.drawElements()</code> otherwise (e.g. four vertices for two triangles that share a side).</p>
 </details>
 
 ## Project 3: Make boilerplate helper and draw triangle
