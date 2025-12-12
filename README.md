@@ -945,11 +945,6 @@ const shader = `#version 300 es
 <p><strong>A:</strong> The Vertex Array Object (VAO).</p>
 </details>
 
-<details>
-<summary><strong>Q:</strong> Why do we use VAOs instead of just binding VBOs and setting pointers every frame?</summary>
-<p><strong>A:</strong> A VAO allows us to store complex attribute setups once and restore them with a single bind call.</p>
-</details>
-
 ## WebGL2 shader compilation
 
 <details>
