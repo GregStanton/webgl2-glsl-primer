@@ -1321,7 +1321,7 @@ Time for some 3D action!
 
 <details> <summary><strong>Q:</strong> In WebGL, when determining the CCW winding order for a specific face of a 3D object, where should you imagine yourself standing?</summary> <p><strong>A:</strong> Outside the object, looking directly at the face.</p></details>
 
-<details><summary><strong>Q:</strong> Suppose you defined a face with CCW winding. How does WebGL know when it's hidden from view and can therefore be culled? </summary> <p><strong>A:</strong> If the camera moves behind the face you defined, then the winding order appears to be clockwise on the 2D screen. So, WebGL calculates the 2D winding on the screen; if it flips to CW, it knows you're looking at the back.</p> </details>
+<details><summary><strong>Q:</strong> How does WebGL know when a face of a 3D object is hidden from view and can therefore be culled? </summary> <p><strong>A:</strong> WebGL calculates the winding order on the screen; it assumes you defined all front faces with a CCW order, so if it sees a face with a CW order, it culls it (as it must be looking at the back).</p> </details>
 
 ## The animation loop
 Here, we learn a general Web API for animations that is exposed to JavaScript. It can be used for many things. We will use it to create an animation with WebGL2.
