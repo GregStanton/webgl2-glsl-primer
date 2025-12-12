@@ -1,6 +1,6 @@
 # WebGL2 & GLSL primer: <br /> A zero-to-hero, spaced-repetition guide
 
-**Status:** Final round of revision under way  
+**Status:** Complete  
 **Author:** Greg Stanton
 
 This primer takes the reader from _zero_ (no knowledge of WebGL2 or GLSL) to _hero_ (confidence in everything from low-level state management to procedural graphics production). If you want to engineer advanced 2D or 3D graphics, or understand how graphics are implemented under the hood, then this guide is for you.
