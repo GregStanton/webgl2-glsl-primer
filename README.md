@@ -907,7 +907,7 @@ const shader = `#version 300 es
 <details>
 <summary><strong>Q:</strong> What value do we give <code>stride</code> when calling <code>gl.vertexAttribPointer()</code>, if we want data to be tightly packed?</summary>
 <p><strong>A:</strong> <code>0</code></p>
-<p><strong>Hint:</strong> This is a special case: if <code>0</code> were the byte offset from the start of one vertex position to the start of the next (for example), that’d mean there’s no position data. So WebGL interprets zero to mean “tightly packed,” (e.g., zero bytes between the <em>end</em> of one vertex position and the <em>start</em> of the next).</p>
+<p><strong>Hint:</strong> This is a special case. If <code>0</code> were the byte offset from the start of one vertex position to the start of the next (for example), that’d mean there’s no position data. So WebGL interprets zero to mean “tightly packed,” (e.g., zero bytes between the <em>end</em> of one vertex position and the <em>start</em> of the next).</p>
 </details>
 
 <details>
