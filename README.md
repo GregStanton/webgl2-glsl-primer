@@ -1276,7 +1276,7 @@ Time for some 3D action!
 
 <details><summary><strong>Q:</strong> What is the order of multiplication when multiplying a matrix $M$ by a vector $v$, when following a row-major convention? </summary> <p><strong>A:</strong> $vM$ </p> <p><strong>Hint:</strong> Since $v$ is a row, it must go on the left for the matrix product to be defined, in general.</p></details>
 
-<details> <summary><strong>Q:</strong> In WebGL, if you want to set the value of a uniform variable declared as a <code>mat4</code> in GLSL, what syntax do you use?</summary> <p><strong>A:</strong> <code>gl.uniformMatrix4fv(location, transpose, data)</code></p> <p><strong>Hint:</strong> It stands for "uniform Matrix 4 float vector," where float vector refers to the type of <code>data</code> used to specify the matrix.</p> </details>
+<details> <summary><strong>Q:</strong> In WebGL, if you want to set the value of a uniform variable declared as a <code>mat4</code> in GLSL, what syntax do you use?</summary> <p><strong>A:</strong> <code>gl.uniformMatrix4fv(location, transpose, data)</code></p> <p><strong>Hint:</strong> It stands for "uniform Matrix 4 float vector," where "float vector" refers to the type of <code>data</code> used to specify the matrix.</p> </details>
 
 <details> <summary><strong>Q:</strong> When calling <code>gl.uniformMatrix4fv()</code> in WebGL, what must the <code>transpose</code> argument always be?</summary> <p><strong>A:</strong> <code>false</code></p> <p><strong>Hint:</strong> The <code>transpose</code> parameter is kept for consistency with OpenGL, but WebGL requires this to be <code>false</code>, so that matrices are always in column-major order.</p> </details>
 
