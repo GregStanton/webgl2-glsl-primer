@@ -959,7 +959,7 @@ const shader = `#version 300 es
       <li><em>Upload</em> (the GLSL source code)</li>
       <li><em>Compile</em></li>
       <li><em>Check</em> (the compile status)</li>
-      <li>If compiling failed, <em>Handle</em> it (by logging or throwing the error and deleting the shader).</li>
+      <li>If compiling failed, <em>Throw</em> the error and <em>Delete</em> the shader.</li>
     </ol>
 </p>
 <p>
@@ -970,7 +970,7 @@ const shader = `#version 300 es
       As with setting up a VBO, we need to <em>Create</em> the object before we <em>Upload</em> to it.
     </li>
     <li>
-      Since this is a program, we then need to <em>Compile</em> it, <em>Check</em> for errors, and then <em>Handle</em> errors if needed.
+      Since this is a program, we then need to <em>Compile</em> it, <em>Check</em> for errors, and then <em>Throw</em> errors and <em>Delete</em> if needed.
     </li>
   </ol>
 </p>
