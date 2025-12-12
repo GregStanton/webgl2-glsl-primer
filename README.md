@@ -1152,7 +1152,7 @@ const shader = `#version 300 es
     * It must create two shaders and one program.
     * It must compile the shaders and check their compile status.
     * It must link the program and check its link status.
-    * <strong>Constraint:</strong> If any check fails, <strong>throw</strong> an error and <strong>delete</strong> the faulty object to avoid memory leaks. Return <code>null</code> if it fails, or the <code>program</code> if it succeeds.
+    * <strong>Constraint:</strong> If any check fails, <strong>throw</strong> an error and <strong>delete</strong> the faulty object to avoid memory leaks. Otherwise, return the <code>program</code>.
 2.  <strong>Shader Source Code:</strong> Define two template strings, <code>vsSource</code> and <code>fsSource</code>.
     * <strong>Vertex Shader:</strong>
         * Accept an attribute <code>position</code> at location 0. Note that your buffer has 2 numbers per vertex, so this should be a <code>vec2</code>.
