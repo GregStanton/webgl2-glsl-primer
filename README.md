@@ -299,7 +299,7 @@ Now we learn how to access the world of WebGL2 that we just described.
 
 <details>
 <summary><strong>Q:</strong> What does <code>canvas.getContext('webgl2')</code> return?</summary>
-<p><strong>A:</strong> A <code>WebGL2RenderingContext</code></p>
+<p><strong>A:</strong> A <code>WebGL2RenderingContext</code>.</p>
 </details>
 
 <details>
@@ -309,7 +309,7 @@ Now we learn how to access the world of WebGL2 that we just described.
 
 <details>
 <summary><strong>Q:</strong> What is the 2D version of <code>WebGL2RenderingContext</code>?</summary>
-<p><strong>A:</strong> <code>CanvasRenderingContext2D</code>.</p>
+<p><strong>A:</strong> <code>CanvasRenderingContext2D</code></p>
 </details>
 
 # 🎨 Hello canvas
@@ -1728,7 +1728,7 @@ Now that you have the irreducible minimum of the programmable geometry pipeline 
 
 * **[RMF Engine](https://github.com/GregStanton/proposal-rmf-engine):**
 
-  * _What it is:_ A high-fidelity computational engine and API for creative coding, supporting sweep geometries (brushes, ribbons, tubes) and motion rails (camera trajectories, write-on effects, choreographed motion) .
+  * _What it is:_ A high-fidelity computational engine and API for creative coding, supporting sweep geometries (brushes, ribbons, tubes) and motion rails (camera trajectories, write-on effects, choreographed motion).
 
   * _How to use it:_ This is the perfect capstone project to test your new skills, with significant real-world benefits. You can help flesh out the proof of concept, or implement the spec in your favorite creative-coding library. This path is for the bold, as you will need to develop the necessary mathematical skills if you don't yet have them.
 
