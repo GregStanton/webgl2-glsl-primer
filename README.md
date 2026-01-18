@@ -440,7 +440,7 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 
 <details>
 <summary><strong>Q:</strong> In WebGL, what is the purpose of a VAO?</summary>
-<p><strong>A:</strong> Recording how to read data from the VBOs. (This is typically vertex-attribute data, hence the name.)</p>
+<p><strong>A:</strong> Recording how to read data from the VBOs.</p>
 </details>
 
 <details>
