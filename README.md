@@ -6,10 +6,10 @@
 This primer takes you from _zero_ (no knowledge of WebGL2 or GLSL) to _hero_ (confidence in everything from low-level state management to procedural graphics production). If you want to engineer advanced 2D or 3D graphics, or understand how graphics are implemented under the hood, then this guide is for you.
 
 ## 🗨️ Discussion
-In case you'd like to learn with others or share feedback, dedicated GitHub Discussions are available:
+In case you'd like to study with others or learn how this guide was made, dedicated GitHub Discussions are available:
 
-* [Show your work & ask questions](https://github.com/GregStanton/webgl2-glsl-primer/discussions/1) **[study group]**
-* [Human expertise vs. AI editing](https://github.com/GregStanton/webgl2-glsl-primer/discussions/2)  **[AI usage policy]**
+* [Study forum: Show your work & ask questions](https://github.com/GregStanton/webgl2-glsl-primer/discussions/1)
+* [Creation process: Human expertise vs. AI editing](https://github.com/GregStanton/webgl2-glsl-primer/discussions/2)
 
 ## :brain: Method
 Fundamentals of WebGL2 and GLSL are introduced in a natural order, chunking concepts and syntax into atomic Q&A _cards_. But **this is _not_ a typical FAQ or a cheat sheet; this is a sequence of guided lessons** meant to be internalized, in order, with concepts that build cumulatively from the ground up. Once a card has been learned, it can be directly incorporated into **spaced-repetition learning software like [Anki](https://apps.ankiweb.net/)**, which leverages a scientifically-backed algorithm to ensure you remember what you learn, _efficiently_ and _permanently_. Because of the small chunks, you can also make significant progress with just a few minutes of effort per day. To provide practice applying the ideas as soon as they’re introduced, **hands-on projects** are integrated throughout, with solution code.
