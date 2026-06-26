@@ -226,8 +226,8 @@ Now we zoom out, to understand the context in which our shaders are situated.
 
 <details>
 <summary><strong>Q:</strong> What is a state machine?</summary>
-<p><strong>A:</strong> A mathematical model of computation defined by a list of states, initial values for those states, and the inputs that trigger each transition.</p>
-<p><strong>Source:</strong> <a href="https://en.wikipedia.org/wiki/Finite-state_machine">Finite-state machine - Wikipedia</a></p>
+<p><strong>A:</strong> A model of computation comprised of a set of states and a starting state, a set of inputs, and a transition rule that uses an input and the current state to determine the next state.</p><p><strong>Hint:</strong> Essentially, its response to an input depends on its current state.</p>
+<p><strong>Source:</strong> <a href="https://en.wikipedia.org/wiki/Finite-state_machine">Finite-state machine - Wikipedia</a>, <a href="https://web.archive.org/web/20181013023517/https://xlinux.nist.gov/dads/HTML/finiteStateMachine.html">NIST Dictionary of Algorithms and Data Structures (Archived)</a>, <a href="https://web.stanford.edu/class/cs123/lectures/CS123_lec07_Finite_State_Machine.pdf">Stanford CS 123 Notes</a></p>
 </details>
 
 <details>
