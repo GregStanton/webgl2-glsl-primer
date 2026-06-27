@@ -220,8 +220,9 @@ Now we zoom out, to understand the context in which our shaders are situated.
 </details>
 
 <details>
-<summary><strong>Q:</strong> What software design pattern best describes the behavior of WebGL?</summary>
+<summary><strong>Q:</strong> What model of computation best describes the behavior of WebGL?</summary>
 <p><strong>A:</strong> A state machine. (You set a state, and it persists until changed.)</p>
+<p><strong>Source:</strong> <a href="https://www.google.com/books/edition/Real_Time_3D_Graphics_with_WebGL_2/Qel1DwAAQBAJ?hl=en&gbpv=1&pg=PA20&printsec=frontcover">Real-Time 3D Graphics with WebGL 2</a></p>
 </details>
 
 <details>
