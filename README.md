@@ -1,3 +1,8 @@
+![Static Badge](https://img.shields.io/badge/Featured%20in%3A-gray?style=for-the-badge)
+[![Static Badge](https://img.shields.io/badge/threejsresources.com-7871FF?style=for-the-badge)](https://threejsresources.com/tool/webgl2-glsl-primer-a-zero-to-hero-spaced-repetition-guide)
+[![Static Badge](https://img.shields.io/badge/awesome--webgl-gray?style=for-the-badge&logo=awesomelists&logoColor=black&labelColor=%23FC60A8&color=black)
+](https://github.com/sjfricke/awesome-webgl#tutorials-1)
+
 # WebGL2 & GLSL primer: <br /> A zero-to-hero, spaced-repetition guide
 
 **Status:** Complete  
