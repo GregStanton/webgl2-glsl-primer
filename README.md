@@ -286,12 +286,11 @@ Now that we understand the basic idea of shaders, and key aspects of the softwar
 
 <details> <summary><strong>Q:</strong> In WebGL, what are the main stages of the <em>execution</em> pipeline? List them in order.</summary> <p><strong>A:</strong></p><p><strong>Vertex shader</strong> (positions the geometry) <br /> <strong>$\to$ Rasterization</strong> (converts vector geometry into fragments) <br /> <strong>$\to$ Fragment shader</strong> (computes the color of each fragment) <br /> <strong>$\to$ Fragment processing</strong> (determines how fragments translate into pixels)</p><p><strong>Note:</strong> When we cover the details, we'll reveal what's inside the "black box" between the vertex shader and rasterization (see the diagram below).</p> 
 
-```
+<pre>
 vertex shader  -->  rasterization  -->  fragment shader  -->  fragment processing
                 ^
           ("black box")
-```
-
+</pre>
 </details>
 
 <details> <summary><strong>Q:</strong> Does the coordinate pipeline span the entire execution pipeline?</summary> <p><strong>A:</strong> No. The coordinate pipeline finishes just before rasterization begins.</p> <p><strong>Hint:</strong> The viewport transform at the end of the coordinate pipeline gets geometry into screen space; right after that, it's possible to identify fragments of primitives that cover particular pixels.</p> </details>
