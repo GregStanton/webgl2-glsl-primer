@@ -318,11 +318,6 @@ Now we learn how to access the world of WebGL2 that we just described.
 <p><strong>A:</strong> <code>gl</code></p>
 </details>
 
-<details>
-<summary><strong>Q:</strong> What is the 2D version of <code>WebGL2RenderingContext</code>?</summary>
-<p><strong>A:</strong> <code>CanvasRenderingContext2D</code></p>
-</details>
-
 # 🎨 Hello canvas
 It’s time to make our first project! We just need to learn a few additional concepts.
 
