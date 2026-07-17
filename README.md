@@ -325,7 +325,7 @@ It’s time to make our first project! We just need to learn a few additional co
 ## Colors and buffers
 
 <details>
-<summary><strong>Q:</strong> What color space is used by the WebGL context?</summary>
+<summary><strong>Q:</strong> What color model is used by the WebGL context?</summary>
 <p><strong>A:</strong> RGBA (red, green, blue, alpha)</p>
 </details>
 
@@ -337,6 +337,7 @@ It’s time to make our first project! We just need to learn a few additional co
 <details>
 <summary><strong>Q:</strong> In a WebGL RGBA color, what value of A (alpha) indicates full opacity?</summary>
 <p><strong>A:</strong> <code>1.0</code></p>
+<p><strong>Hint:</strong> You may think of alpha as <i>opacity</i>. (Both "opacity" and "transparency" are sometimes used as descriptors, but "opacity" accurately describes the meaning of the value <code>1.0</code>.)</p>
 </details>
 
 <details>
