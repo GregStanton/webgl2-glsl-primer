@@ -495,6 +495,7 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 <details>
 <summary><strong>Q:</strong> In WebGL, what syntax binds a buffer?</summary>
 <p><strong>A:</strong> <code>gl.bindBuffer(target, buffer)</code></p>
+<p><strong>Hint:</strong> Since a buffer is a general chunk of memory with various uses, WebGL offers multiple bind targets.</p>
 </details>
 
 <details>
