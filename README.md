@@ -489,6 +489,7 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 <details>
 <summary><strong>Q:</strong> In WebGL, what syntax creates a buffer (VBO)?</summary>
 <p><strong>A:</strong> <code>gl.createBuffer()</code> (this function does not take parameters)</p>
+<p><strong>Hint:</strong> A buffer is a general chunk of memory with various uses, so the API doesn't specifically include "vertex" in the method name.</p>
 </details>
 
 <details>
