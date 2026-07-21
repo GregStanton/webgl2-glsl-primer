@@ -169,7 +169,7 @@ We begin by defining basic terms, and the core software units that process our g
 
 <details>
 <summary><strong>Q:</strong> In computer graphics, what is a vertex?</summary>
-<p><strong>A:</strong> As in geometry, a vertex is one of a set of points that defines a shape (e.g. the three corners of a triangle). A vertex may have additional attributes for rendering (drawing), such as a color.</p>
+<p><strong>A:</strong> As in geometry, a vertex is one of a set of points that defines a shape (e.g., the three corners of a triangle). A vertex may have additional attributes for rendering (drawing), such as a color.</p>
 <p><strong>Source:</strong> <a href="https://en.wikipedia.org/wiki/Vertex_(computer_graphics)">Vertex (computer graphics) - Wikipedia</a>, <a href="https://en.wikipedia.org/wiki/Vertex_(geometry)">Vertex (geometry) - Wikipedia</a></p>
 </details>
 
