@@ -505,7 +505,7 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 
 <details>
 <summary><strong>Q:</strong> What kind of data is usually bound to <code>gl.ARRAY_BUFFER</code>?</summary>
-<p><strong>A:</strong> Vertex attribute data (e.g. position, normal, color, texture data)</p>
+<p><strong>A:</strong> Vertex attribute data (e.g., position, normal, color, texture data)</p>
 </details>
 
 <details>
@@ -719,7 +719,7 @@ gl.bufferData(gl.ARRAY_BUFFER, triangleVertices, gl.STATIC_DRAW);
 
 ## Attribute interpolation
 
-<details><summary><strong>Q:</strong> In mathematics, what is <em>interpolation</em>?</summary> <p><strong>A:</strong> Interpolation refers to determining an <em>inter</em>mediate value between two given values (e.g. finding a position between points A and B that's 40% of the distance from A to B).</p></details>
+<details><summary><strong>Q:</strong> In mathematics, what is <em>interpolation</em>?</summary> <p><strong>A:</strong> Interpolation refers to determining an <em>inter</em>mediate value between two given values (e.g., finding a position between points A and B that's 40% of the distance from A to B).</p></details>
 
 <details><summary><strong>Q:</strong> What's an example of an attribute that needs to be interpolated between vertices?</summary><p><strong>A:</strong> A color. (Other typical examples are normal vectors or texture coordinates.) </p></details>
 
@@ -758,7 +758,7 @@ const shader = `#version 300 es
 
 <details>
 <summary><strong>Q:</strong> In GLSL, which shader stage requires an explicit precision declaration?</summary>
-<p><strong>A:</strong> The fragment shader.</p><p><strong>Hint:</strong> If vertices aren’t in the right place, things go wrong, so high precision is mandated for vertex shaders, but lower precision is allowed for fragment shaders, e.g. to avoid draining battery on older mobile devices.)</p>
+<p><strong>A:</strong> The fragment shader.</p><p><strong>Hint:</strong> If vertices aren’t in the right place, things go wrong, so high precision is mandated for vertex shaders, but lower precision is allowed for fragment shaders (e.g., to avoid draining battery on older mobile devices).</p>
 </details>
 
 <details>
@@ -917,9 +917,9 @@ const shader = `#version 300 es
 </details>
 
 <details>
-<summary><strong>Q:</strong> What term do we use to describe attribute data like <code>x0, y0, x1, y1,…</code> in which attributes in a buffer all have the same kind (e.g. they’re all positions)?</summary>
+<summary><strong>Q:</strong> What term do we use to describe attribute data like <code>x0, y0, x1, y1,…</code> in which attributes in a buffer all have the same kind (e.g., they’re all positions)?</summary>
 <p><strong>A:</strong> <em>Tightly packed</em></p>
-<p><strong>Hint:</strong> If only positions are represented, then that means there’s zero space between positions (e.g. we don’t have position data, then color data, then position data, etc.).</p>
+<p><strong>Hint:</strong> If only positions are represented, then that means there’s zero space between positions (e.g., we don’t have position data, then color data, then position data, etc.).</p>
 </details>
 
 <details>
@@ -930,7 +930,7 @@ const shader = `#version 300 es
 
 <details>
 <summary><strong>Q:</strong> If <code>stride</code> is set to zero when calling <code>gl.vertexAttribPointer()</code>, how can WebGL determine the byte offset to get from one attribute to the next?</summary>
-<p><strong>A:</strong> WebGL interprets a <code>stride</code> of <code>0</code> to mean the data is tightly packed (e.g. all position data, with no color data in between). It then automatically calculates the correct byte offset based on the <code>size</code> and <code>type</code> parameters.</p>
+<p><strong>A:</strong> WebGL interprets a <code>stride</code> of <code>0</code> to mean the data is tightly packed (e.g., all position data, with no color data in between). It then automatically calculates the correct byte offset based on the <code>size</code> and <code>type</code> parameters.</p>
 </details>
 
 <details>
@@ -940,12 +940,12 @@ const shader = `#version 300 es
 
 <details>
 <summary><strong>Q:</strong> Roughly, when might it be useful to use tightly packed attributes in a WebGL array buffer?</summary>
-<p><strong>A:</strong> Using tightly packed attributes means that all positions would go into one array buffer, all colors would go into another, etc. This can be useful for <strong>dynamic geometry</strong>, e.g. when positions need to be updated but not colors.</p>
+<p><strong>A:</strong> Using tightly packed attributes means that all positions would go into one array buffer, all colors would go into another, etc. This can be useful for <strong>dynamic geometry</strong> (e.g., when positions need to be updated but not colors).</p>
 </details>
 
 <details>
 <summary><strong>Q:</strong> Roughly, when might it be useful to use interleaved attributes in a WebGL array buffer?</summary>
-<p><strong>A:</strong> This keeps all data for a single vertex close together in memory, which can be more efficient for <strong>static geometry</strong>, e.g. where it’s not necessary to update positions but keep colors the same. (Interleaved attributes also make it possible to deal with just a single buffer.)</p>
+<p><strong>A:</strong> This keeps all data for a single vertex close together in memory, which can be more efficient for <strong>static geometry</strong> (e.g., where it’s not necessary to update positions or normal vectors). (Interleaved attributes also make it possible to deal with just a single buffer.)</p>
 </details>
 
 <details>
@@ -1114,7 +1114,7 @@ const shader = `#version 300 es
 
 <details>
 <summary><strong>Q:</strong> In the WebGL2 API, what does "arrays" refer to in <code>gl.drawArrays()</code>?</summary>
-<p><strong>A:</strong> As it carries out the drawing task, this function aggregates vertex attributes from multiple arrays (e.g. position, color, and texture arrays), assembling all data for vertex 1, then for vertex 2, and so on.</p>
+<p><strong>A:</strong> As it carries out the drawing task, this function aggregates vertex attributes from multiple arrays (e.g., position, color, and texture arrays), assembling all data for vertex 1, then for vertex 2, and so on.</p>
 </details>
 
 <details>
@@ -1159,7 +1159,7 @@ const shader = `#version 300 es
 
 <details>
 <summary><strong>Q:</strong> What's a guideline for deciding between using <code>gl.drawArrays()</code> and <code>gl.drawElements()</code>?</summary>
-<p><strong>A:</strong> Use <code>gl.drawArrays()</code> when there is little to no vertex sharing between primitives (e.g. six vertices for two triangles, each with its own vertices), and use <code>gl.drawElements()</code> otherwise (e.g. four vertices for two triangles that share a side).</p>
+<p><strong>A:</strong> Use <code>gl.drawArrays()</code> when there is little to no vertex sharing between primitives (e.g., six vertices for two triangles, each with its own vertices), and use <code>gl.drawElements()</code> otherwise (e.g., four vertices for two triangles that share a side).</p>
 </details>
 
 ## Project 3: Make boilerplate helper and draw triangle
@@ -1340,7 +1340,7 @@ Time for some 3D action!
 
 <details> <summary><strong>Q:</strong> When the depth test is enabled in WebGL, what update must you be sure to make every frame? Answer in words. </summary> <p><strong>A:</strong> Clear the depth buffer. (This ensures that old data doesn't persist.)</p> </details>
 
-<details> <summary><strong>Q:</strong> In computer graphics, what is "face culling"?</summary> <p><strong>A:</strong> It's an optimization that avoids drawing faces that wouldn't be visible anyway (e.g. the back face of a cube).</p> </details>
+<details> <summary><strong>Q:</strong> In computer graphics, what is "face culling"?</summary> <p><strong>A:</strong> It's an optimization that avoids drawing faces that wouldn't be visible anyway (e.g., the back face of a cube).</p> </details>
 
 <details> <summary><strong>Q:</strong> In WebGL, face culling is applied to triangles if they have what spatial relation to the camera?</summary> <p><strong>A:</strong> The triangles are culled if they are facing away from the camera.</p> <p><strong>Hint:</strong> Imagine that you color a paper triangle red, but if someone flips it over, they'll see it's still white on the other side. That's the back face. WebGL also has a way of determining which face of a triangle is the front and which is the back.</p></details>
 
@@ -1427,7 +1427,7 @@ function draw(timestamp) {
 
 **Goal:** Render a multicolored unit cube, centered at the origin, that rotates in 3D space. You may reuse logic from Project 3 as appropriate.
 
-**Allowed linear-algebra dependency:** You may use [glMatrix](https://glmatrix.net/) for the matrix transformations, by downloading [`gl-matrix-min.js`](https://github.com/toji/gl-matrix/blob/master/dist/gl-matrix-min.js) from the GitHub repo, putting it into a folder called `libs` in your project directory, and then including it in `index.html` with a `<script>` element above the line where you include your own script. You may also use the [`glMatrix` documentation](https://glmatrix.net/docs/module-glMatrix.html) as a reference if needed. Note that the library exposes a global `glMatrix` object: you'll typically access functions via `glMatrix.mat4.create()`, `glMatrix.vec3.fromValues()`, etc. Also note that vectors and matrices (e.g. `mat4` and `vec3`) are all `Float32Array` instances.
+**Allowed linear-algebra dependency:** You may use [glMatrix](https://glmatrix.net/) for the matrix transformations, by downloading [`gl-matrix-min.js`](https://github.com/toji/gl-matrix/blob/master/dist/gl-matrix-min.js) from the GitHub repo, putting it into a folder called `libs` in your project directory, and then including it in `index.html` with a `<script>` element above the line where you include your own script. You may also use the [`glMatrix` documentation](https://glmatrix.net/docs/module-glMatrix.html) as a reference if needed. Note that the library exposes a global `glMatrix` object: you'll typically access functions via `glMatrix.mat4.create()`, `glMatrix.vec3.fromValues()`, etc. Also note that vectors and matrices (e.g., `mat4` and `vec3`) are all `Float32Array` instances.
 
 **Approach:** To allow distinct colors for each face, you may duplicate vertices. There will then be 36 vertices total: 6 faces $\times$ 2 triangles $\times$ 3 vertices.
 
