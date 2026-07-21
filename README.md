@@ -161,8 +161,8 @@ We begin by defining basic terms, and the core software units that process our g
 </details>
 
 <details>
-<summary><strong>Q:</strong> What mathematical concept unifies points (0D), lines (1D), and triangles (2D)?</summary>
-<p><strong>A:</strong> Each of these is a <em>simplex</em>, the simplest n-dimensional shape of its respective dimension.</p>
+<summary><strong>Q:</strong> What mathematical concept unifies points (0D), lines (1D), and triangles (2D)? Name and describe it.</summary>
+<p><strong>A:</strong> Each of these is a <i>simplex</i>, the simplest n-dimensional shape of its respective dimension.</p>
 <p><strong>Note:</strong> This unifying concept arises in graphics topics ranging from collision detection to shape morphing.</p>
 <p><strong>Source:</strong> <a href="https://en.wikipedia.org/wiki/Simplex">Simplex - Wikipedia</a>, <a href="https://en.wikipedia.org/wiki/Gilbert%E2%80%93Johnson%E2%80%93Keerthi_distance_algorithm">GJK algorithm - Wikipedia</a>, <a href="https://dl.acm.org/doi/pdf/10.1145/344779.344859">As-rigid-as-possible shape interpolation</a>
 </details>
