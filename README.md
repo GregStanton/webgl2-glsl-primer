@@ -1716,6 +1716,13 @@ function createProgram(gl, vsSource, fsSource) {
 
 </details>
 
+**Bonus challenge:** As a bonus exercise not covered in the solution code, you may try reducing memory usage with a `gl.ELEMENT_ARRAY_BUFFER` while maintaining face colors. 
+
+<details>
+ <summary><strong>Hint for bonus challenge:</strong></summary>
+ <p>Consider how many vertices are needed to represent a single face.</p>
+</details>
+
 # Community & next steps
 
 **🤗 Community:**
