@@ -56,7 +56,7 @@ Knowledge of HTML and JavaScript is assumed.
 **Mathematics:** 
 Simple, concise explanations are provided for the topics below.
 
-* 3D primitives, including triangle strips and triangle fans
+* Drawing modes, including triangle strips and triangle fans
 * Matrix representations of geometric transformations
 * Homogeneous coordinates in projective geometry
 * Transforms in the standard 3D rendering pipeline
@@ -65,7 +65,7 @@ Simple, concise explanations are provided for the topics below.
 
 This section explains the mathematical prerequisites at the level of detail we will need, with references for anyone desiring additional detail.
 
-### 3D primitives (drawing modes)
+### Drawing modes
 
 The image below is sufficient for understanding WebGL drawing modes (shape “kinds” in p5.js):
 
