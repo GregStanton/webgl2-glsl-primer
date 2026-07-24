@@ -515,7 +515,7 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 
 <details>
 <summary><strong>Q:</strong> Can you give a concrete example to indicate the purpose of <code>gl.ELEMENT_ARRAY_BUFFER</code>?</summary>
-<p><strong>A:</strong> Suppose you want to create a rectangle from four vertices. This needs to be created out of triangles, and there are two ways to triangulate a rectangle. The element array buffer can be used to specify the triangulation, by indicating which vertices should be connected.</p>
+<p><strong>A:</strong> Suppose you want to draw a rectangle from <em>four</em> vertices. If you use two triangles, storing three vertices for each, that's <em>six</em> sets of vertex attributes, duplicating data. An element array buffer stores an index sequence (e.g., <code>[0, 1, 2, 0, 2, 3]</code>), allowing you to reuse vertices without duplicating them in memory.</p>
 </details>
 
 <details>
