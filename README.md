@@ -520,6 +520,18 @@ Now we'll work toward getting a triangle on the screen. This will take some effo
 </details>
 
 <details>
+<summary><strong>Q:</strong> You're considering using either (a) the <code>gl.TRIANGLE_STRIP</code> drawing mode with an <em>array buffer</em> or (b)
+<code>gl.TRIANGLES</code> with an <em>element array buffer</em>. Which approach is more flexible? Explain.</summary>
+<p><strong>A:</strong> Approach (b) is more flexible, as element array buffers allow arbitrary vertex usage and reusage, whereas applying <code>gl.TRIANGLE_STRIP</code> to an array buffer forces one specific pattern.</p>
+</details>
+
+<details>
+<summary><strong>Q:</strong> You're considering using either (a) the <code>gl.TRIANGLE_STRIP</code> drawing mode with an <em>array buffer</em> or (b)
+<code>gl.TRIANGLES</code> with an <em>element array buffer</em>. Which approach requires less setup? Explain.</summary>
+<p><strong>A:</strong> Approach (a) requires less setup: instead of creating an element array buffer with a specific index sequence, all that's needed is to pass in <code>gl.TRIANGLE_STRIP</code> as the drawing mode.</p>
+</details>
+
+<details>
 <summary><strong>Q:</strong> What syntax sends data to the currently bound buffer?</summary>
 <p><strong>A:</strong> <code>gl.bufferData(target, data, usage)</code></p>
 </details>
