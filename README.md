@@ -1170,11 +1170,6 @@ const shader = `#version 300 es
 <p><strong>A:</strong> <code>gl.drawArrays()</code> uses array buffers (bound to <code>gl.ARRAY_BUFFER</code>) and <code>gl.drawElements()</code> uses <em>element</em> array buffers (bound to <code>gl.ELEMENT_ARRAY_BUFFER</code>).</p>
 </details>
 
-<details>
-<summary><strong>Q:</strong> What's a guideline for deciding between using <code>gl.drawArrays()</code> and <code>gl.drawElements()</code>?</summary>
-<p><strong>A:</strong> Use <code>gl.drawArrays()</code> if there is little-to-no vertex sharing between primitives (e.g., two disconnected triangles with six distinct vertices), and use <code>gl.drawElements()</code> otherwise (e.g., two triangles that share a side, with only four distinct vertices).</p>
-</details>
-
 ## Project 3: Make boilerplate helper and draw triangle
 <img 
   width="250" 
