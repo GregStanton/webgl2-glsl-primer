@@ -1769,4 +1769,4 @@ Now that you have the irreducible minimum of the programmable geometry pipeline 
 
 If you found this guide helpful and wish to reference it, please include the following citation:
 
-> [*WebGL2 & GLSL primer: A zero-to-hero, spaced-repetition guide*](https://github.com/GregStanton/webgl2-glsl-primer) by Greg Stanton (2025), licensed under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
+> [*WebGL2 & GLSL primer: A zero-to-hero, spaced-repetition guide*](https://github.com/GregStanton/webgl2-glsl-primer) by Greg Stanton (2025–2026), licensed under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
