@@ -1763,10 +1763,10 @@ Now that you have the irreducible minimum of the programmable geometry pipeline 
 
   * _How to use it:_ This is the perfect capstone project to test your new skills, with significant real-world benefits. You can help flesh out the proof of concept, or implement the spec in your favorite creative-coding library. This path is for the bold, as you will need to develop the necessary mathematical skills if you don't yet have them.
 
-# Citation & license
+# License & attribution
 
 [![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
 
-If you found this guide helpful and wish to reference it, please include the following citation:
+If you share or adapt this guide, please include the following attribution:
 
 > [*WebGL2 & GLSL primer: A zero-to-hero, spaced-repetition guide*](https://github.com/GregStanton/webgl2-glsl-primer) by Greg Stanton (2025–2026), licensed under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
