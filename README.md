@@ -1361,7 +1361,7 @@ Time for some 3D action!
 
 <details><summary><strong>Q:</strong> How does WebGL know when a face of a 3D object is hidden from view and can therefore be culled? </summary> <p><strong>A:</strong> WebGL calculates the winding order on the screen; it assumes you defined all front faces with a CCW order, so if it sees a face with a CW order, it culls it (as it must be looking at the back).</p> </details>
 
-## The animation loop
+## Animation loop
 Here, we learn a general Web API for animations that is exposed to JavaScript. It can be used for many things. We will use it to create an animation with WebGL2.
 
 <details> <summary><strong>Q:</strong> In the browser, what API is the standard for creating smooth animations? Answer with the precise syntax.</summary> <p><strong>A:</strong> <code>requestAnimationFrame(callback)</code></p> </details>
