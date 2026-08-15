@@ -1427,7 +1427,7 @@ function draw(timestamp) {
 
 <details> <summary><strong>Q:</strong> Where do you get the <code>requestID</code> needed to cancel an animation frame request made with <code>requestAnimationFrame()</code>?</summary> <p><strong>A:</strong> It is the return value of the <code>requestAnimationFrame()</code> call.</p> </details>
 
-## Project 4: The Spinning Cube
+## Project 4: Spinning cube
 
 <img width="250" height="250" alt="spinning multicolored cube" src="https://github.com/user-attachments/assets/57bca82d-cfbf-48d0-9623-bc764039f39b" />
 
@@ -1439,25 +1439,25 @@ function draw(timestamp) {
 
 **Specifications:**
 
-1. **State Management:**
+1. **State management:**
    * Enable the depth test and face culling.
    * Create a VAO.
    * Create two VBOs: one for `positions`, one for `colors` (Note: You can use two <code>bufferData</code> calls and two <code>vertexAttribPointer</code> calls attached to the same VAO).
    * Configure `position` (attribute location 0) and `color` (attribute location 1).
 2. **Shaders:**
-   * **Vertex Shader:**
+   * **Vertex shader:**
      * Attributes: `in vec3 position`, `in vec3 color`.
      * Uniforms: `uniform mat4 uModel`, `uniform mat4 uView`, `uniform mat4 uProjection`.
      * Output: `out vec3 vColor` ("v" is conventional and stands for "varying," just as "u" stands for "uniform" in `uModel`).
      * Main: Set `gl_Position = uProjection * uView * uModel * vec4(position, 1.0);`. Pass `color` to `vColor`.
-   * **Fragment Shader:**
+   * **Fragment shader:**
      * Input: `in vec3 vColor`.
      * Output: `fragColor` using the interpolated input color (alpha 1.0).
-3. **Matrix Logic (`glMatrix`):** Create model, view, and projection matrices. Upload view and projection matrices via `gl.uniformMatrix4fv`.
+3. **Matrix logic (`glMatrix`):** Create model, view, and projection matrices. Upload view and projection matrices via `gl.uniformMatrix4fv`.
     * **Model:** Use `mat4.create()`.
     * **View:** Use `mat4.lookAt`. (Eye: `[0, 0, 4]`, Center: `[0, 0, 0]`, Up: `[0, 1, 0]`).
     * **Projection:** Use `mat4.perspective`. (FOV: $\frac{\pi}{4}$ radians, Aspect: canvas width/height, Near: 0.1, Far: 100.0).
-4. **Render Loop:**
+4. **Render loop:**
     * Use `requestAnimationFrame`.
     * Clear both color and depth buffers.
     * Update the model matrix (rotate it slightly every frame around a unit-length axis vector using `mat4.rotate`).
