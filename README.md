@@ -1184,18 +1184,18 @@ const shader = `#version 300 es
 <strong>Context:</strong> From <a href="#project-2-create-and-bind-vbo-and-vao-supply-triangle-data">Project 2</a>, you already have the geometry (a <code>Float32Array</code> of 2D coordinates) in a VBO, and a VAO that is currently bound. Now you need to build the program to process that data.
 </p>
 
-<strong>Project Specifications:</strong>
+<strong>Project specifications:</strong>
 
-1.  <strong>Helper Function:</strong> Create a function <code>createProgram(gl, vsSource, fsSource)</code> at the bottom of your file.
+1.  <strong>Helper function:</strong> Create a function <code>createProgram(gl, vsSource, fsSource)</code> at the bottom of your file.
     * It must create two shaders and one program.
     * It must compile the shaders and check their compile status.
     * It must link the program and check its link status.
     * <strong>Constraint:</strong> If any check fails, <strong>throw</strong> an error and <strong>delete</strong> the faulty object to avoid memory leaks. Otherwise, return the <code>program</code>.
-2.  <strong>Shader Source Code:</strong> Define two template strings, <code>vsSource</code> and <code>fsSource</code>.
-    * <strong>Vertex Shader:</strong>
+2.  <strong>Shader source code:</strong> Define two template strings, <code>vsSource</code> and <code>fsSource</code>.
+    * <strong>Vertex shader:</strong>
         * Accept an attribute <code>position</code> at location 0. Note that your buffer has 2 numbers per vertex, so this should be a <code>vec2</code>.
         * Output a <code>gl_Position</code>. (Hint: You will need to convert your <code>vec2</code> input.)
-    * <strong>Fragment Shader:</strong>
+    * <strong>Fragment shader:</strong>
         * Declare the variable to output.
         * Output the color orange: <code>vec4(1.0, 0.4, 0.0, 1.0)</code>.
 3.  <strong>Execution:</strong>
